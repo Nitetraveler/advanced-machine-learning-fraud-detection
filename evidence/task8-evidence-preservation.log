@@ -1,0 +1,16 @@
+========== PRESERVE ORIGINAL MONITORING REPORTS ==========
+
+========== PRESERVE MONITORING CHECKSUMS ==========
+evidence/pre-challenge/drift_control.json: OK
+evidence/pre-challenge/drift_drift.json: OK
+evidence/pre-challenge/drift_comparison.csv: OK
+evidence/pre-challenge/model_meta.json: OK
+evidence/pre-challenge/champion-alias.json: OK
+data/batch_control.csv: OK
+data/batch_drift.csv: OK
+
+========== VERIFY PRESERVED DECISIONS ==========
+true
+true
+
+PASS: Pre-challenge grading evidence preserved

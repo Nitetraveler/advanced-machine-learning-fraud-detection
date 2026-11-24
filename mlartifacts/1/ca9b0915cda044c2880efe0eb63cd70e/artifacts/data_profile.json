@@ -1,0 +1,16 @@
+{
+  "rows": 30000,
+  "train_rows": 24000,
+  "test_rows": 6000,
+  "fraud_rate": 0.030833333333333334,
+  "missing": {
+    "amount": 0,
+    "hour": 0,
+    "account_age_days": 0,
+    "txn_count_24h": 0,
+    "distance_from_home_km": 927,
+    "avg_amount_30d": 0,
+    "merchant_category": 598,
+    "channel": 0
+  }
+}

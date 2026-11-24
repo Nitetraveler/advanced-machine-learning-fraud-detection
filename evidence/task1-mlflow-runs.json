@@ -1,0 +1,65 @@
+{
+  "runs": [
+    {
+      "info": {
+        "run_uuid": "ca9b0915cda044c2880efe0eb63cd70e",
+        "experiment_id": "1",
+        "run_name": "dataset_v1",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795542972290,
+        "end_time": 1795542972383,
+        "artifact_uri": "mlflow-artifacts:/1/ca9b0915cda044c2880efe0eb63cd70e/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "ca9b0915cda044c2880efe0eb63cd70e"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "fraud_rate",
+            "value": 0.030833333333333334,
+            "timestamp": 1795542972345,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "generator_seed",
+            "value": "42"
+          },
+          {
+            "key": "rows",
+            "value": "30000"
+          },
+          {
+            "key": "test_size",
+            "value": "0.2"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/make_data.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "dataset_v1"
+          },
+          {
+            "key": "task",
+            "value": "data"
+          }
+        ]
+      },
+      "inputs": {}
+    }
+  ]
+}

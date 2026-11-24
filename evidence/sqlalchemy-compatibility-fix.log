@@ -1,0 +1,38 @@
+========== PRESERVE SERVER FAILURE EVIDENCE ==========
+
+========== CURRENT SQLALCHEMY VERSION ==========
+Name: SQLAlchemy
+Version: 2.1.9
+
+========== INSTALL COMPATIBLE SQLALCHEMY ==========
+Collecting SQLAlchemy==2.0.32
+  Downloading SQLAlchemy-2.0.32-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./.venv/lib/python3.12/site-packages (from SQLAlchemy==2.0.32) (4.16.0)
+Collecting greenlet!=0.4.17 (from SQLAlchemy==2.0.32)
+  Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Downloading SQLAlchemy-2.0.32-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 174.8 MB/s eta 0:00:00
+Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 621.4/621.4 kB 55.0 MB/s eta 0:00:00
+Installing collected packages: greenlet, SQLAlchemy
+  Attempting uninstall: SQLAlchemy
+    Found existing installation: SQLAlchemy 2.1.9
+    Uninstalling SQLAlchemy-2.1.9:
+      Successfully uninstalled SQLAlchemy-2.1.9
+Successfully installed SQLAlchemy-2.0.32 greenlet-3.5.6
+
+[notice] A new release of pip is available: 24.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+
+========== VERIFY RUNTIME COMPATIBILITY ==========
+SQLAlchemy: 2.0.32
+MLflow: 2.15.1
+PASS: SQLAlchemy pool import
+PASS: MLflow SQLite backend import
+
+========== VERIFY DEPENDENCIES ==========
+No broken requirements found.
+
+========== RECORD COMPATIBILITY PIN ==========
+
+========== COMPATIBILITY FIX PASSED ==========

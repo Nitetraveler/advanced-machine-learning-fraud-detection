@@ -1,0 +1,35 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.1
+mlflow_version: 2.15.1
+model_size_bytes: 455289
+model_uuid: f543761062a44cffb6166c9aec1b96fc
+run_id: a7d0dadf7902447fa2016a0a125b98c4
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_payload.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "amount", "required": true}, {"type": "long",
+    "name": "hour", "required": true}, {"type": "long", "name": "account_age_days",
+    "required": true}, {"type": "long", "name": "txn_count_24h", "required": true},
+    {"type": "double", "name": "distance_from_home_km", "required": true}, {"type":
+    "double", "name": "avg_amount_30d", "required": true}, {"type": "string", "name":
+    "merchant_category", "required": true}, {"type": "string", "name": "channel",
+    "required": true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+utc_time_created: '2026-11-24 18:05:01.359487'

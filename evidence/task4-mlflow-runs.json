@@ -1,0 +1,409 @@
+{
+  "runs": [
+    {
+      "info": {
+        "run_uuid": "fef733c94cd840d6903f9470fb5c2a17",
+        "experiment_id": "1",
+        "run_name": "stacking_lr_rf_xgb",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543297780,
+        "end_time": 1795543297834,
+        "artifact_uri": "mlflow-artifacts:/1/fef733c94cd840d6903f9470fb5c2a17/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "fef733c94cd840d6903f9470fb5c2a17"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc_mean",
+            "value": 0.16248087688868065,
+            "timestamp": 1795543297822,
+            "step": 0
+          },
+          {
+            "key": "cv_pr_auc_std",
+            "value": 0.03548613062630337,
+            "timestamp": 1795543297822,
+            "step": 0
+          },
+          {
+            "key": "test_pr_auc",
+            "value": 0.19817209353771428,
+            "timestamp": 1795543297822,
+            "step": 0
+          },
+          {
+            "key": "test_roc_auc",
+            "value": 0.8340284910878204,
+            "timestamp": 1795543297822,
+            "step": 0
+          },
+          {
+            "key": "train_seconds",
+            "value": 55.48977792799997,
+            "timestamp": 1795543297822,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "estimator",
+            "value": "stacking_lr_rf_xgb"
+          },
+          {
+            "key": "cv_folds",
+            "value": "3"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/ensembles.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "stacking_lr_rf_xgb"
+          },
+          {
+            "key": "task",
+            "value": "ensembles"
+          }
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "d2f02b24768b433a8ce09d66085242d5",
+        "experiment_id": "1",
+        "run_name": "xgboost",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543242035,
+        "end_time": 1795543242105,
+        "artifact_uri": "mlflow-artifacts:/1/d2f02b24768b433a8ce09d66085242d5/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "d2f02b24768b433a8ce09d66085242d5"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc_mean",
+            "value": 0.13415337261544977,
+            "timestamp": 1795543242088,
+            "step": 0
+          },
+          {
+            "key": "cv_pr_auc_std",
+            "value": 0.02613401331604236,
+            "timestamp": 1795543242088,
+            "step": 0
+          },
+          {
+            "key": "test_pr_auc",
+            "value": 0.1862268245768827,
+            "timestamp": 1795543242088,
+            "step": 0
+          },
+          {
+            "key": "test_roc_auc",
+            "value": 0.813594850224257,
+            "timestamp": 1795543242088,
+            "step": 0
+          },
+          {
+            "key": "train_seconds",
+            "value": 3.776971126999797,
+            "timestamp": 1795543242088,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "estimator",
+            "value": "xgboost"
+          },
+          {
+            "key": "cv_folds",
+            "value": "3"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/ensembles.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "xgboost"
+          },
+          {
+            "key": "task",
+            "value": "ensembles"
+          }
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "79679c40636f4fd299d329bfb7d822e8",
+        "experiment_id": "1",
+        "run_name": "hist_gradient_boosting",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543238115,
+        "end_time": 1795543238184,
+        "artifact_uri": "mlflow-artifacts:/1/79679c40636f4fd299d329bfb7d822e8/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "79679c40636f4fd299d329bfb7d822e8"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc_mean",
+            "value": 0.1354553435298325,
+            "timestamp": 1795543238166,
+            "step": 0
+          },
+          {
+            "key": "cv_pr_auc_std",
+            "value": 0.024912856841764235,
+            "timestamp": 1795543238166,
+            "step": 0
+          },
+          {
+            "key": "test_pr_auc",
+            "value": 0.17632507395357003,
+            "timestamp": 1795543238166,
+            "step": 0
+          },
+          {
+            "key": "test_roc_auc",
+            "value": 0.8210838697683066,
+            "timestamp": 1795543238166,
+            "step": 0
+          },
+          {
+            "key": "train_seconds",
+            "value": 1.5451853479999045,
+            "timestamp": 1795543238166,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "estimator",
+            "value": "hist_gradient_boosting"
+          },
+          {
+            "key": "cv_folds",
+            "value": "3"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/ensembles.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "hist_gradient_boosting"
+          },
+          {
+            "key": "task",
+            "value": "ensembles"
+          }
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "292dd9518baf43d8b2d7317bc8d2bc67",
+        "experiment_id": "1",
+        "run_name": "random_forest",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543236435,
+        "end_time": 1795543236500,
+        "artifact_uri": "mlflow-artifacts:/1/292dd9518baf43d8b2d7317bc8d2bc67/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "292dd9518baf43d8b2d7317bc8d2bc67"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc_mean",
+            "value": 0.1396791309036997,
+            "timestamp": 1795543236484,
+            "step": 0
+          },
+          {
+            "key": "cv_pr_auc_std",
+            "value": 0.02296023804021337,
+            "timestamp": 1795543236484,
+            "step": 0
+          },
+          {
+            "key": "test_pr_auc",
+            "value": 0.151687799580808,
+            "timestamp": 1795543236484,
+            "step": 0
+          },
+          {
+            "key": "test_roc_auc",
+            "value": 0.8137463688968418,
+            "timestamp": 1795543236484,
+            "step": 0
+          },
+          {
+            "key": "train_seconds",
+            "value": 14.364560260999951,
+            "timestamp": 1795543236484,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "estimator",
+            "value": "random_forest"
+          },
+          {
+            "key": "cv_folds",
+            "value": "3"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/ensembles.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "random_forest"
+          },
+          {
+            "key": "task",
+            "value": "ensembles"
+          }
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "cc1b2847ee6b4278809641d6687ee5b2",
+        "experiment_id": "1",
+        "run_name": "logreg_balanced",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543221854,
+        "end_time": 1795543221918,
+        "artifact_uri": "mlflow-artifacts:/1/cc1b2847ee6b4278809641d6687ee5b2/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "cc1b2847ee6b4278809641d6687ee5b2"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc_mean",
+            "value": 0.13729546160654363,
+            "timestamp": 1795543221904,
+            "step": 0
+          },
+          {
+            "key": "cv_pr_auc_std",
+            "value": 0.025332216692995933,
+            "timestamp": 1795543221904,
+            "step": 0
+          },
+          {
+            "key": "test_pr_auc",
+            "value": 0.18717993973431926,
+            "timestamp": 1795543221904,
+            "step": 0
+          },
+          {
+            "key": "test_roc_auc",
+            "value": 0.828720689735307,
+            "timestamp": 1795543221904,
+            "step": 0
+          },
+          {
+            "key": "train_seconds",
+            "value": 0.3476942020001843,
+            "timestamp": 1795543221904,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "estimator",
+            "value": "logreg_balanced"
+          },
+          {
+            "key": "cv_folds",
+            "value": "3"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/ensembles.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "logreg_balanced"
+          },
+          {
+            "key": "task",
+            "value": "ensembles"
+          }
+        ]
+      },
+      "inputs": {}
+    }
+  ]
+}

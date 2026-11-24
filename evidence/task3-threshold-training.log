@@ -1,0 +1,8 @@
+OOF cost at threshold 0.50: 71310.00
+Optimal OOF threshold: 0.4900
+Minimum OOF cost: 70535.00
+Theoretical Bayes threshold: 0.0244
+Cost reduction: 1.09%
+2026/11/24 17:58:54 INFO mlflow.tracking._tracking_service.client: 🏃 View run lr_balanced_cost_threshold at: http://127.0.0.1:5000/#/experiments/1/runs/a8b1cfd654824e25ac0fbea996b6c7c8.
+2026/11/24 17:58:54 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+PASS: OOF threshold optimisation

@@ -1,0 +1,10 @@
+.venv
+.git
+mlartifacts
+mlruns
+data
+reports
+evidence
+*.db
+*.out
+**/__pycache__

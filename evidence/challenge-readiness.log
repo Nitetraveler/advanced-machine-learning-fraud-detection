@@ -1,0 +1,67 @@
+========== VERIFY TASK 8 VALIDATION ==========
+========== TASK 8 ALL CHECKS PASSED ==========
+
+========== VERIFY SERVICES ==========
+OK
+{
+  "status": "ok",
+  "model_name": "fraud-detector",
+  "model_version": "1"
+}
+
+========== VERIFY ORIGINAL DATASET ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== VERIFY ORIGINAL MODEL ==========
+models/fraud_model.joblib: OK
+models/model_meta.json: OK
+
+========== VERIFY PRESERVED EVIDENCE ==========
+evidence/pre-challenge/drift_control.json: OK
+evidence/pre-challenge/drift_drift.json: OK
+evidence/pre-challenge/drift_comparison.csv: OK
+evidence/pre-challenge/model_meta.json: OK
+evidence/pre-challenge/champion-alias.json: OK
+data/batch_control.csv: OK
+data/batch_drift.csv: OK
+
+========== PRESERVE ORIGINAL MODEL ==========
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+PASS: Original champion backup preserved
+
+========== MONITORING SUMMARY ==========
+{
+  "batch": "control",
+  "rows": 5000,
+  "fraud_rate": 0.03,
+  "pr_auc": 0.18053793171041907,
+  "recall": 0.72,
+  "precision": 0.07458563535911603,
+  "decision": "OK",
+  "reasons": []
+}
+{
+  "batch": "drift",
+  "rows": 5000,
+  "fraud_rate": 0.0448,
+  "pr_auc": 0.1530759284535206,
+  "recall": 0.8214285714285714,
+  "precision": 0.07721359630717582,
+  "decision": "RETRAIN",
+  "reasons": [
+    "amount: PSI=0.3904 >= 0.25",
+    "txn_count_24h: PSI=0.2668 >= 0.25",
+    "channel: PSI=0.3440 >= 0.25"
+  ]
+}
+
+========== SYSTEM RESOURCES ==========
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       1.9Gi       279Mi        27Mi       1.8Gi       1.8Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1   29G   11G   18G  39% /
+
+PASS: Challenge readiness verified

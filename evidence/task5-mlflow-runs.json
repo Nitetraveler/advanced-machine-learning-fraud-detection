@@ -1,0 +1,147 @@
+{
+  "runs": [
+    {
+      "info": {
+        "run_uuid": "a7d0dadf7902447fa2016a0a125b98c4",
+        "experiment_id": "1",
+        "run_name": "xgb_optuna_best",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543501175,
+        "end_time": 1795543506706,
+        "artifact_uri": "mlflow-artifacts:/1/a7d0dadf7902447fa2016a0a125b98c4/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "a7d0dadf7902447fa2016a0a125b98c4"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc",
+            "value": 0.1700321837386367,
+            "timestamp": 1795543501259,
+            "step": 0
+          },
+          {
+            "key": "test_accuracy",
+            "value": 0.74,
+            "timestamp": 1795543501259,
+            "step": 0
+          },
+          {
+            "key": "test_roc_auc",
+            "value": 0.8424679881945574,
+            "timestamp": 1795543501259,
+            "step": 0
+          },
+          {
+            "key": "test_pr_auc",
+            "value": 0.23161202325020996,
+            "timestamp": 1795543501259,
+            "step": 0
+          },
+          {
+            "key": "test_precision",
+            "value": 0.08659049909801564,
+            "timestamp": 1795543501259,
+            "step": 0
+          },
+          {
+            "key": "test_recall",
+            "value": 0.7783783783783784,
+            "timestamp": 1795543501259,
+            "step": 0
+          },
+          {
+            "key": "test_f1",
+            "value": 0.15584415584415584,
+            "timestamp": 1795543501259,
+            "step": 0
+          },
+          {
+            "key": "decision_threshold",
+            "value": 0.23,
+            "timestamp": 1795543501259,
+            "step": 0
+          },
+          {
+            "key": "test_cost",
+            "value": 15795.0,
+            "timestamp": 1795543501259,
+            "step": 0
+          },
+          {
+            "key": "test_cost_at_0_5",
+            "value": 23145.0,
+            "timestamp": 1795543501259,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "n_estimators",
+            "value": "500"
+          },
+          {
+            "key": "max_depth",
+            "value": "2"
+          },
+          {
+            "key": "learning_rate",
+            "value": "0.026159367791959917"
+          },
+          {
+            "key": "subsample",
+            "value": "0.6010004902112124"
+          },
+          {
+            "key": "colsample_bytree",
+            "value": "0.5179576183143129"
+          },
+          {
+            "key": "min_child_weight",
+            "value": "18"
+          },
+          {
+            "key": "reg_lambda",
+            "value": "5.3521519170871565"
+          },
+          {
+            "key": "scale_pos_weight",
+            "value": "10.446518764126761"
+          },
+          {
+            "key": "study_trials_total",
+            "value": "30"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/tune.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "xgb_optuna_best"
+          },
+          {
+            "key": "task",
+            "value": "tuning"
+          },
+          {
+            "key": "mlflow.log-model.history",
+            "value": "[{\"run_id\": \"a7d0dadf7902447fa2016a0a125b98c4\", \"artifact_path\": \"model\", \"utc_time_created\": \"2026-11-24 18:05:01.359487\", \"flavors\": {\"python_function\": {\"model_path\": \"model.pkl\", \"predict_fn\": \"predict\", \"loader_module\": \"mlflow.sklearn\", \"python_version\": \"3.12.3\", \"env\": {\"conda\": \"conda.yaml\", \"virtualenv\": \"python_env.yaml\"}}, \"sklearn\": {\"pickled_model\": \"model.pkl\", \"sklearn_version\": \"1.5.1\", \"serialization_format\": \"cloudpickle\", \"code\": null}}, \"model_uuid\": \"f543761062a44cffb6166c9aec1b96fc\", \"mlflow_version\": \"2.15.1\", \"signature\": {\"inputs\": \"[{\\\"type\\\": \\\"double\\\", \\\"name\\\": \\\"amount\\\", \\\"required\\\": true}, {\\\"type\\\": \\\"long\\\", \\\"name\\\": \\\"hour\\\", \\\"required\\\": true}, {\\\"type\\\": \\\"long\\\", \\\"name\\\": \\\"account_age_days\\\", \\\"required\\\": true}, {\\\"type\\\": \\\"long\\\", \\\"name\\\": \\\"txn_count_24h\\\", \\\"required\\\": true}, {\\\"type\\\": \\\"double\\\", \\\"name\\\": \\\"distance_from_home_km\\\", \\\"required\\\": true}, {\\\"type\\\": \\\"double\\\", \\\"name\\\": \\\"avg_amount_30d\\\", \\\"required\\\": true}, {\\\"type\\\": \\\"string\\\", \\\"name\\\": \\\"merchant_category\\\", \\\"required\\\": true}, {\\\"type\\\": \\\"string\\\", \\\"name\\\": \\\"channel\\\", \\\"required\\\": true}]\", \"outputs\": \"[{\\\"type\\\": \\\"long\\\", \\\"required\\\": true}]\", \"params\": null}, \"saved_input_example_info\": {\"artifact_path\": \"input_example.json\", \"type\": \"dataframe\", \"pandas_orient\": \"split\", \"serving_input_path\": \"serving_input_payload.json\"}, \"model_size_bytes\": 455289}]"
+          }
+        ]
+      },
+      "inputs": {}
+    }
+  ]
+}

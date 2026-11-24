@@ -1,0 +1,73 @@
+{
+  "runs": [
+    {
+      "info": {
+        "run_uuid": "a8b1cfd654824e25ac0fbea996b6c7c8",
+        "experiment_id": "1",
+        "run_name": "lr_balanced_cost_threshold",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543134828,
+        "end_time": 1795543134885,
+        "artifact_uri": "mlflow-artifacts:/1/a8b1cfd654824e25ac0fbea996b6c7c8/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "a8b1cfd654824e25ac0fbea996b6c7c8"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "oof_cost_at_0_5",
+            "value": 71310.0,
+            "timestamp": 1795543134870,
+            "step": 0
+          },
+          {
+            "key": "oof_best_cost",
+            "value": 70535.0,
+            "timestamp": 1795543134870,
+            "step": 0
+          },
+          {
+            "key": "best_threshold",
+            "value": 0.49,
+            "timestamp": 1795543134870,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "cost_fn",
+            "value": "200"
+          },
+          {
+            "key": "cost_fp",
+            "value": "5"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/threshold.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "lr_balanced_cost_threshold"
+          },
+          {
+            "key": "task",
+            "value": "threshold"
+          }
+        ]
+      },
+      "inputs": {}
+    }
+  ]
+}

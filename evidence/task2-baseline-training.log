@@ -1,0 +1,7 @@
+2026/11/24 17:57:13 INFO mlflow.tracking._tracking_service.client: 🏃 View run dummy_majority at: http://127.0.0.1:5000/#/experiments/1/runs/c209fed7162e482f902239b08425961d.
+2026/11/24 17:57:13 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+2026/11/24 17:57:14 INFO mlflow.tracking._tracking_service.client: 🏃 View run logreg_baseline at: http://127.0.0.1:5000/#/experiments/1/runs/d24c101afa8546a4b9068aece14a4d2b.
+2026/11/24 17:57:14 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+          model  accuracy  roc_auc  pr_auc  precision  recall     f1
+ dummy_majority    0.9692   0.5000  0.0308     0.0000  0.0000 0.0000
+logreg_baseline    0.9703   0.8256  0.2007     0.7692  0.0541 0.1010

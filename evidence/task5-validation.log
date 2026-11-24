@@ -1,0 +1,72 @@
+========== VERIFY MLFLOW HEALTH ==========
+OK
+
+========== VERIFY OPTUNA DATABASE ==========
+-rw-r--r-- 1 ubuntu ubuntu 152K Nov 24 18:04 optuna.db
+
+========== QUERY TUNING RUNS ==========
+xgb_optuna_best	FINISHED	a7d0dadf7902447fa2016a0a125b98c4
+
+========== VERIFY CHAMPION ALIAS ==========
+{
+  "model_version": {
+    "name": "fraud-detector",
+    "version": "1",
+    "creation_timestamp": 1795543506368,
+    "last_updated_timestamp": 1795543506368,
+    "current_stage": "None",
+    "description": "",
+    "source": "mlflow-artifacts:/1/a7d0dadf7902447fa2016a0a125b98c4/artifacts/model",
+    "run_id": "a7d0dadf7902447fa2016a0a125b98c4",
+    "status": "READY",
+    "run_link": "",
+    "aliases": [
+      "champion"
+    ]
+  }
+}
+
+========== VERIFY STUDY AND REGISTERED MODEL ==========
+Total trials: 30
+Completed: 20
+Pruned: 10
+PASS: Full 30-trial tuning target
+PASS: Valid optimisation objective
+PASS: All eight hyperparameters
+PASS: Tuning run finished
+PASS: Champion metrics verified
+Champion version: 1
+Champion run ID: a7d0dadf7902447fa2016a0a125b98c4
+Downloading artifacts:   0%|          | 0/7 [00:00<?, ?it/s]Downloading artifacts:  14%|█▍        | 1/7 [00:00<00:00, 87.46it/s]Downloading artifacts:  29%|██▊       | 2/7 [00:00<00:00, 127.31it/s]Downloading artifacts:  43%|████▎     | 3/7 [00:00<00:00, 79.98it/s] Downloading artifacts:  57%|█████▋    | 4/7 [00:00<00:00, 95.36it/s]Downloading artifacts:  71%|███████▏  | 5/7 [00:00<00:00, 115.83it/s]Downloading artifacts:  86%|████████▌ | 6/7 [00:00<00:00, 131.14it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 144.31it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 143.84it/s]
+PASS: Registered champion loads successfully
+PASS: Champion inference produces valid probabilities
+PASS: Tuning report matches registered champion
+
+========== VERIFIED CHAMPION METRICS ==========
+cv_pr_auc: 0.170032
+decision_threshold: 0.230000
+test_accuracy: 0.740000
+test_cost: 15795.000000
+test_cost_at_0_5: 23145.000000
+test_f1: 0.155844
+test_pr_auc: 0.231612
+test_precision: 0.086590
+test_recall: 0.778378
+test_roc_auc: 0.842468
+
+PASS: All tuning and registry checks
+
+========== VERIFY DATASET UNCHANGED ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== VERIFY REQUIRED FILES ==========
+PASS: src/tune.py
+PASS: optuna.db
+PASS: reports/tuning_report.json
+PASS: evidence/task5-optuna-training.log
+PASS: evidence/task5-mlflow-runs.json
+PASS: evidence/task5-champion-alias.json
+
+========== TASK 5 ALL CHECKS PASSED ==========

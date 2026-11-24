@@ -1,0 +1,18 @@
+{
+  "model_name": "fraud-detector",
+  "model_version": "1",
+  "run_id": "a7d0dadf7902447fa2016a0a125b98c4",
+  "threshold": 0.23,
+  "test_pr_auc": 0.23161202325020996,
+  "features": [
+    "amount",
+    "hour",
+    "account_age_days",
+    "txn_count_24h",
+    "distance_from_home_km",
+    "avg_amount_30d",
+    "merchant_category",
+    "channel"
+  ],
+  "exported_at": "2026-11-24T18:09:38.688891+00:00"
+}

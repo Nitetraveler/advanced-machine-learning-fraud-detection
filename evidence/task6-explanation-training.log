@@ -1,0 +1,77 @@
+Downloading artifacts:   0%|          | 0/7 [00:00<?, ?it/s]Downloading artifacts:  14%|█▍        | 1/7 [00:00<00:00, 11037.64it/s]Downloading artifacts:  29%|██▊       | 2/7 [00:00<00:00, 8160.12it/s] Downloading artifacts:  43%|████▎     | 3/7 [00:00<00:00, 8507.72it/s]Downloading artifacts:  57%|█████▋    | 4/7 [00:00<00:00, 1276.22it/s]Downloading artifacts:  71%|███████▏  | 5/7 [00:00<00:00, 1441.94it/s]Downloading artifacts:  86%|████████▌ | 6/7 [00:00<00:00, 815.22it/s] Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 909.69it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 893.11it/s]
+Champion version: 1
+Champion run ID: a7d0dadf7902447fa2016a0a125b98c4
+
+========== PERMUTATION IMPORTANCE ==========
+amount: 0.089660
+hour: 0.088410
+channel: 0.080055
+distance_from_home_km: 0.068237
+merchant_category: 0.045561
+txn_count_24h: 0.041035
+account_age_days: 0.039312
+avg_amount_30d: 0.026505
+
+========== NATIVE XGBOOST SHAP ==========
+Contribution matrix shape: (6000, 16)
+Maximum additivity error: 4.5299530029296875e-06
+SHAP additivity check: True
+PASS: SHAP contributions reconstruct model margins
+
+========== GLOBAL SHAP IMPORTANCE ==========
+channel: 0.451106
+hour: 0.446725
+amount: 0.374821
+distance_from_home_km: 0.353125
+account_age_days: 0.340241
+merchant_category: 0.276255
+txn_count_24h: 0.266901
+avg_amount_30d: 0.200299
+
+========== LOCAL HIGH-RISK EXPLANATION ==========
+Test row: 5651
+Fraud probability: 0.9236372113227844
+Actual label: 1
+Bias contribution: -1.0568718910217285
+Raw model margin: 2.492823600769043
+num__amount: +1.283994
+num__hour: +0.695552
+cat__merchant_category_online_gaming: +0.660584
+num__account_age_days: +0.596343
+cat__channel_web: +0.587416
+num__txn_count_24h: +0.370012
+
+========== ISOTONIC CALIBRATION ==========
+Brier score raw: 0.06307528522427135
+Brier score calibrated: 0.0266390872193163
+PR-AUC raw: 0.23161202325020996
+PR-AUC calibrated: 0.22770456794869626
+Mean raw probability: 0.18883191049098969
+Mean calibrated probability: 0.030526320154636376
+Observed fraud rate: 0.030833333333333334
+
+========== RAW CALIBRATION CURVE ==========
+ mean_predicted  observed_fraction
+       0.047483           0.004167
+       0.088573           0.005000
+       0.139261           0.006667
+       0.221537           0.028333
+       0.447305           0.110000
+
+========== ISOTONIC CALIBRATION CURVE ==========
+ mean_predicted  observed_fraction
+       0.004285           0.003940
+       0.009011           0.004371
+       0.014078           0.008326
+       0.025830           0.030227
+       0.100201           0.107950
+2026/11/24 18:07:33 INFO mlflow.tracking._tracking_service.client: 🏃 View run champion_explain_calibration at: http://127.0.0.1:5000/#/experiments/1/runs/9b4a9e19b9e14e1da0af92603f619eaa.
+2026/11/24 18:07:33 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+
+PASS: Permutation importance
+PASS: Global SHAP explanation
+PASS: Local SHAP explanation
+PASS: SHAP additivity verification
+PASS: Probability calibration
+PASS: Explanation report saved
+PASS: MLflow explanation run logged

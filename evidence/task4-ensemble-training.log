@@ -1,0 +1,66 @@
+
+========== MODEL 1/5: logreg_balanced ==========
+Running 3-fold cross-validation...
+CV PR-AUC: 0.137295 +/- 0.025332
+Training on full training dataset...
+2026/11/24 18:00:21 INFO mlflow.tracking._tracking_service.client: 🏃 View run logreg_balanced at: http://127.0.0.1:5000/#/experiments/1/runs/cc1b2847ee6b4278809641d6687ee5b2.
+2026/11/24 18:00:21 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+Test PR-AUC: 0.187180
+Test ROC-AUC: 0.828721
+Training seconds: 0.35
+PASS: logreg_balanced completed
+
+========== MODEL 2/5: random_forest ==========
+Running 3-fold cross-validation...
+CV PR-AUC: 0.139679 +/- 0.022960
+Training on full training dataset...
+2026/11/24 18:00:36 INFO mlflow.tracking._tracking_service.client: 🏃 View run random_forest at: http://127.0.0.1:5000/#/experiments/1/runs/292dd9518baf43d8b2d7317bc8d2bc67.
+2026/11/24 18:00:36 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+Test PR-AUC: 0.151688
+Test ROC-AUC: 0.813746
+Training seconds: 14.36
+PASS: random_forest completed
+
+========== MODEL 3/5: hist_gradient_boosting ==========
+Running 3-fold cross-validation...
+CV PR-AUC: 0.135455 +/- 0.024913
+Training on full training dataset...
+2026/11/24 18:00:38 INFO mlflow.tracking._tracking_service.client: 🏃 View run hist_gradient_boosting at: http://127.0.0.1:5000/#/experiments/1/runs/79679c40636f4fd299d329bfb7d822e8.
+2026/11/24 18:00:38 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+Test PR-AUC: 0.176325
+Test ROC-AUC: 0.821084
+Training seconds: 1.55
+PASS: hist_gradient_boosting completed
+
+========== MODEL 4/5: xgboost ==========
+Running 3-fold cross-validation...
+CV PR-AUC: 0.134153 +/- 0.026134
+Training on full training dataset...
+2026/11/24 18:00:42 INFO mlflow.tracking._tracking_service.client: 🏃 View run xgboost at: http://127.0.0.1:5000/#/experiments/1/runs/d2f02b24768b433a8ce09d66085242d5.
+2026/11/24 18:00:42 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+Test PR-AUC: 0.186227
+Test ROC-AUC: 0.813595
+Training seconds: 3.78
+PASS: xgboost completed
+
+========== MODEL 5/5: stacking_lr_rf_xgb ==========
+Running 3-fold cross-validation...
+CV PR-AUC: 0.162481 +/- 0.035486
+Training on full training dataset...
+2026/11/24 18:01:37 INFO mlflow.tracking._tracking_service.client: 🏃 View run stacking_lr_rf_xgb at: http://127.0.0.1:5000/#/experiments/1/runs/fef733c94cd840d6903f9470fb5c2a17.
+2026/11/24 18:01:37 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+Test PR-AUC: 0.198172
+Test ROC-AUC: 0.834028
+Training seconds: 55.49
+PASS: stacking_lr_rf_xgb completed
+
+========== ENSEMBLE COMPARISON ==========
+                 model  cv_pr_auc_mean  cv_pr_auc_std  test_pr_auc  test_roc_auc  train_seconds
+    stacking_lr_rf_xgb        0.162481       0.035486     0.198172      0.834028      55.489778
+         random_forest        0.139679       0.022960     0.151688      0.813746      14.364560
+       logreg_balanced        0.137295       0.025332     0.187180      0.828721       0.347694
+hist_gradient_boosting        0.135455       0.024913     0.176325      0.821084       1.545185
+               xgboost        0.134153       0.026134     0.186227      0.813595       3.776971
+
+Best model by CV PR-AUC: stacking_lr_rf_xgb
+PASS: All five ensemble experiments completed

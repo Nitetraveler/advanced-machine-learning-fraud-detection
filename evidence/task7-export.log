@@ -1,0 +1,26 @@
+Downloading artifacts:   0%|          | 0/7 [00:00<?, ?it/s]Downloading artifacts:  14%|█▍        | 1/7 [00:00<00:00, 11554.56it/s]Downloading artifacts:  29%|██▊       | 2/7 [00:00<00:00, 9565.12it/s] Downloading artifacts:  43%|████▎     | 3/7 [00:00<00:00, 524.94it/s] Downloading artifacts:  57%|█████▋    | 4/7 [00:00<00:00, 526.92it/s]Downloading artifacts:  71%|███████▏  | 5/7 [00:00<00:00, 437.77it/s]Downloading artifacts:  86%|████████▌ | 6/7 [00:00<00:00, 452.00it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 456.01it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 451.59it/s]
+{
+  "model_name": "fraud-detector",
+  "model_version": "1",
+  "run_id": "a7d0dadf7902447fa2016a0a125b98c4",
+  "threshold": 0.23,
+  "test_pr_auc": 0.23161202325020996,
+  "features": [
+    "amount",
+    "hour",
+    "account_age_days",
+    "txn_count_24h",
+    "distance_from_home_km",
+    "avg_amount_30d",
+    "merchant_category",
+    "channel"
+  ],
+  "exported_at": "2026-11-24T18:09:38.688891+00:00"
+}
+PASS: Champion model exported
+PASS: Model metadata exported
+true
+total 452K
+-rw-rw-r-- 1 ubuntu ubuntu 445K Nov 24 18:09 fraud_model.joblib
+-rw-rw-r-- 1 ubuntu ubuntu  402 Nov 24 18:09 model_meta.json
+PASS: Champion export verified

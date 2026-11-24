@@ -1,0 +1,18 @@
+2026/11/24 17:58:29 INFO mlflow.tracking._tracking_service.client: 🏃 View run lr_plain at: http://127.0.0.1:5000/#/experiments/1/runs/e4df89d6a3e04d3eaec458e4f486ffad.
+2026/11/24 17:58:29 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+lr_plain: PR-AUC=0.1415 ROC-AUC=0.7899 Recall=0.0068
+2026/11/24 17:58:30 INFO mlflow.tracking._tracking_service.client: 🏃 View run lr_balanced at: http://127.0.0.1:5000/#/experiments/1/runs/843bf555e31d42ae8887fb3e75f29f1d.
+2026/11/24 17:58:30 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+lr_balanced: PR-AUC=0.1394 ROC-AUC=0.7922 Recall=0.7243
+2026/11/24 17:58:31 INFO mlflow.tracking._tracking_service.client: 🏃 View run lr_smote at: http://127.0.0.1:5000/#/experiments/1/runs/ffc2b6ffe4a14c279154db5cb089cd8e.
+2026/11/24 17:58:31 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+lr_smote: PR-AUC=0.1397 ROC-AUC=0.7911 Recall=0.7216
+2026/11/24 17:58:31 INFO mlflow.tracking._tracking_service.client: 🏃 View run lr_smote_LEAKY at: http://127.0.0.1:5000/#/experiments/1/runs/20cf409978364d999615c5ca59594380.
+2026/11/24 17:58:31 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+lr_smote_LEAKY: PR-AUC=0.7944 ROC-AUC=0.8100 Recall=0.7504
+
+         model  leaky  cv_pr_auc_mean  cv_pr_auc_std  cv_roc_auc_mean  cv_roc_auc_std  cv_precision_mean  cv_precision_std  cv_recall_mean  cv_recall_std
+      lr_plain  False          0.1415         0.0173           0.7899          0.0228             0.2067            0.1119          0.0068         0.0043
+   lr_balanced  False          0.1394         0.0172           0.7922          0.0198             0.0808            0.0052          0.7243         0.0494
+      lr_smote  False          0.1397         0.0164           0.7911          0.0197             0.0815            0.0045          0.7216         0.0409
+lr_smote_LEAKY   True          0.7944         0.0048           0.8100          0.0035             0.7440            0.0073          0.7504         0.0029

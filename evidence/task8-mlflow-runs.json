@@ -1,0 +1,258 @@
+{
+  "runs": [
+    {
+      "info": {
+        "run_uuid": "e81de83fc5b54a3898306c8e4c6f0d4a",
+        "experiment_id": "1",
+        "run_name": "monitor_drift",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795544056447,
+        "end_time": 1795544056513,
+        "artifact_uri": "mlflow-artifacts:/1/e81de83fc5b54a3898306c8e4c6f0d4a/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "e81de83fc5b54a3898306c8e4c6f0d4a"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "psi_amount",
+            "value": 0.39044929814870005,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "psi_hour",
+            "value": 0.0016904981302480612,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "psi_account_age_days",
+            "value": 0.0009683557135929897,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "psi_txn_count_24h",
+            "value": 0.2667573834486242,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "psi_distance_from_home_km",
+            "value": 0.0015046012608401736,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "psi_avg_amount_30d",
+            "value": 0.0020923349260620304,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "psi_merchant_category",
+            "value": 0.0010587934072004868,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "psi_channel",
+            "value": 0.34401239073509154,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "batch_pr_auc",
+            "value": 0.1530759284535206,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "pr_auc_drop",
+            "value": 0.07853609479668935,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "batch_recall",
+            "value": 0.8214285714285714,
+            "timestamp": 1795544056483,
+            "step": 0
+          },
+          {
+            "key": "batch_precision",
+            "value": 0.07721359630717582,
+            "timestamp": 1795544056483,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "model_version",
+            "value": "1"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/monitor.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "monitor_drift"
+          },
+          {
+            "key": "task",
+            "value": "monitoring"
+          },
+          {
+            "key": "batch",
+            "value": "drift"
+          },
+          {
+            "key": "decision",
+            "value": "RETRAIN"
+          }
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "e24eb3a816504f52aabd3c596ba73fb7",
+        "experiment_id": "1",
+        "run_name": "monitor_control",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795544053996,
+        "end_time": 1795544054068,
+        "artifact_uri": "mlflow-artifacts:/1/e24eb3a816504f52aabd3c596ba73fb7/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "e24eb3a816504f52aabd3c596ba73fb7"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "psi_amount",
+            "value": 0.00261251560684226,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "psi_hour",
+            "value": 0.0027443037880875583,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "psi_account_age_days",
+            "value": 0.002638519440630121,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "psi_txn_count_24h",
+            "value": 0.0013904078608587879,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "psi_distance_from_home_km",
+            "value": 0.0024501051737478444,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "psi_avg_amount_30d",
+            "value": 0.0009031034131433584,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "psi_merchant_category",
+            "value": 0.0019581699000851736,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "psi_channel",
+            "value": 0.0002507711269687347,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "batch_pr_auc",
+            "value": 0.18053793171041907,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "pr_auc_drop",
+            "value": 0.051074091539790895,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "batch_recall",
+            "value": 0.72,
+            "timestamp": 1795544054035,
+            "step": 0
+          },
+          {
+            "key": "batch_precision",
+            "value": 0.07458563535911603,
+            "timestamp": 1795544054035,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "model_version",
+            "value": "1"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/monitor.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "monitor_control"
+          },
+          {
+            "key": "task",
+            "value": "monitoring"
+          },
+          {
+            "key": "batch",
+            "value": "control"
+          },
+          {
+            "key": "decision",
+            "value": "OK"
+          }
+        ]
+      },
+      "inputs": {}
+    }
+  ]
+}

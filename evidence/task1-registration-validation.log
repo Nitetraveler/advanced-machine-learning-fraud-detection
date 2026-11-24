@@ -1,0 +1,80 @@
+========== START MLFLOW SERVER ==========
+MLflow server starting; log: /home/ubuntu/ml-lab/mlflow-server.out
+
+========== WAIT FOR MLFLOW ==========
+Waiting: 1/30
+Waiting: 2/30
+OK
+
+========== MANDATORY HEALTH CHECK ==========
+OK
+
+========== VERIFY SQLITE DATABASE ==========
+-rw-r--r-- 1 ubuntu ubuntu 220K Nov 24 17:56 mlflow.db
+
+========== VERIFY LISTENING PORT ==========
+LISTEN 0      2048       127.0.0.1:5000      0.0.0.0:*    users:(("python",pid=60566,fd=5),("python",pid=60565,fd=5))
+
+========== VERIFY PYTHON CONNECTIVITY ==========
+2026/11/24 17:56:10 INFO mlflow.tracking.fluent: Experiment with name 'fraud-detection' does not exist. Creating a new experiment.
+HTTP status: 200
+Experiment: fraud-detection
+Experiment ID: 1
+PASS: MLflow tracking connectivity
+
+========== GENERATE AND REGISTER DATASET ==========
+2026/11/24 17:56:12 INFO mlflow.tracking._tracking_service.client: 🏃 View run dataset_v1 at: http://127.0.0.1:5000/#/experiments/1/runs/ca9b0915cda044c2880efe0eb63cd70e.
+2026/11/24 17:56:12 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+rows=30000 fraud_rate=0.0308
+train=24000 test=6000
+train_fraud=740 test_fraud=185
+missing values per column:
+amount                     0
+hour                       0
+account_age_days           0
+txn_count_24h              0
+distance_from_home_km    927
+avg_amount_30d             0
+merchant_category        598
+channel                    0
+
+========== VERIFY MLFLOW DATASET RUN ==========
+true
+dataset_v1	FINISHED	ca9b0915cda044c2880efe0eb63cd70e
+
+========== VERIFY DATASET PROFILE ==========
+{
+  "rows": 30000,
+  "train_rows": 24000,
+  "test_rows": 6000,
+  "fraud_rate": 0.030833333333333334,
+  "missing": {
+    "amount": 0,
+    "hour": 0,
+    "account_age_days": 0,
+    "txn_count_24h": 0,
+    "distance_from_home_km": 927,
+    "avg_amount_30d": 0,
+    "merchant_category": 598,
+    "channel": 0
+  }
+}
+
+========== VERIFY SERVER LOG ==========
+INFO  [alembic.runtime.migration] Running upgrade 0c779009ac13 -> cc1f77228345, change param value length to 500
+INFO  [alembic.runtime.migration] Running upgrade cc1f77228345 -> 97727af70f4d, Add creation_time and last_update_time to experiments table
+INFO  [alembic.runtime.migration] Running upgrade 97727af70f4d -> 3500859a5d39, Add Model Aliases table
+INFO  [alembic.runtime.migration] Running upgrade 3500859a5d39 -> 7f2a7d5fae7d, add datasets inputs input_tags tables
+INFO  [alembic.runtime.migration] Running upgrade 7f2a7d5fae7d -> 2d6e25af4d3e, increase max param val length from 500 to 8000
+INFO  [alembic.runtime.migration] Running upgrade 2d6e25af4d3e -> acf3f17fdcc7, add storage location field to model versions
+INFO  [alembic.runtime.migration] Running upgrade acf3f17fdcc7 -> 867495a8f9d4, add trace tables
+INFO  [alembic.runtime.migration] Running upgrade 867495a8f9d4 -> 5b0e9adcef9c, add cascade deletion to trace tables foreign keys
+INFO  [alembic.runtime.migration] Running upgrade 5b0e9adcef9c -> 4465047574b1, increase max dataset schema size
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+[2026-11-24 17:56:07 +0000] [60565] [INFO] Starting gunicorn 22.0.0
+[2026-11-24 17:56:07 +0000] [60565] [INFO] Listening at: http://127.0.0.1:5000 (60565)
+[2026-11-24 17:56:07 +0000] [60565] [INFO] Using worker: sync
+[2026-11-24 17:56:07 +0000] [60566] [INFO] Booting worker with pid: 60566
+
+========== MLFLOW AND DATA REGISTRATION PASSED ==========

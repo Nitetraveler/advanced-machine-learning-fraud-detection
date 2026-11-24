@@ -1,0 +1,142 @@
+========== VERIFY MLFLOW HEALTH ==========
+OK
+
+========== VERIFY EXPLANATION REPORT ==========
+{
+  "model_version": "1",
+  "run_id": "a7d0dadf7902447fa2016a0a125b98c4",
+  "permutation_importance": {
+    "amount": 0.08966039365368163,
+    "hour": 0.08841048431329704,
+    "channel": 0.08005514753910523,
+    "distance_from_home_km": 0.06823668582917095,
+    "merchant_category": 0.045561097968817243,
+    "txn_count_24h": 0.04103533498777965,
+    "account_age_days": 0.039312240184246165,
+    "avg_amount_30d": 0.026505269096339483
+  },
+  "shap_global": {
+    "channel": 0.45110609063735074,
+    "hour": 0.4467249504054586,
+    "amount": 0.3748213891244571,
+    "distance_from_home_km": 0.3531248502223025,
+    "account_age_days": 0.34024127781693825,
+    "merchant_category": 0.2762553578313479,
+    "txn_count_24h": 0.26690123074905325,
+    "avg_amount_30d": 0.20029938626055083
+  },
+  "additivity_check": true,
+  "additivity_max_error": 0.0000045299530029296875,
+  "brier_raw": 0.06307528522427135,
+  "brier_calibrated": 0.0266390872193163,
+  "mean_pred_raw": 0.18883191049098969,
+  "mean_pred_calibrated": 0.030526320154636376,
+  "observed_rate": 0.030833333333333334,
+  "pr_auc_raw": 0.23161202325020996,
+  "pr_auc_calibrated": 0.22770456794869626,
+  "local_explanation": {
+    "test_row": 5651,
+    "fraud_probability": 0.9236372113227844,
+    "actual_label": 1,
+    "bias": -1.0568718910217285,
+    "margin": 2.492823600769043,
+    "top_contributions": [
+      {
+        "feature": "num__amount",
+        "contribution": 1.2839938402175903
+      },
+      {
+        "feature": "num__hour",
+        "contribution": 0.6955524682998657
+      },
+      {
+        "feature": "cat__merchant_category_online_gaming",
+        "contribution": 0.6605843305587769
+      },
+      {
+        "feature": "num__account_age_days",
+        "contribution": 0.5963431596755981
+      },
+      {
+        "feature": "cat__channel_web",
+        "contribution": 0.587416410446167
+      },
+      {
+        "feature": "num__txn_count_24h",
+        "contribution": 0.3700120747089386
+      }
+    ]
+  },
+  "calibration_curve_raw": {
+    "mean_predicted": [
+      0.047482759173338614,
+      0.0885730697090427,
+      0.13926105988522372,
+      0.22153748701016107,
+      0.44730519245068234
+    ],
+    "observed_fraction": [
+      0.004166666666666667,
+      0.005,
+      0.006666666666666667,
+      0.028333333333333332,
+      0.11
+    ]
+  },
+  "calibration_curve_calibrated": {
+    "mean_predicted": [
+      0.004285157963035167,
+      0.009010795887564023,
+      0.014078357187416414,
+      0.025830391127164606,
+      0.10020050390193568
+    ],
+    "observed_fraction": [
+      0.003940110323089046,
+      0.004370629370629371,
+      0.00832639467110741,
+      0.030226700251889168,
+      0.10794979079497909
+    ]
+  }
+}
+
+========== QUERY EXPLANATION RUNS ==========
+champion_explain_calibration	FINISHED	9b4a9e19b9e14e1da0af92603f619eaa
+
+========== VALIDATE EXPLANATIONS ==========
+PASS: Explanation utility tests
+PASS: Required report fields
+PASS: All eight raw features explained
+PASS: SHAP additivity check
+PASS: Six local feature contributions
+PASS: Calibration metrics valid
+PASS: MLflow explanation run verified
+PASS: Original champion preserved
+PASS: Original decision threshold preserved
+
+========== CALIBRATION COMPARISON ==========
+Raw Brier score: 0.06307528522427135
+Calibrated Brier score: 0.0266390872193163
+Brier improvement: 57.77%
+Raw PR-AUC: 0.23161202325020996
+Calibrated PR-AUC: 0.22770456794869626
+Mean raw probability: 0.18883191049098969
+Mean calibrated probability: 0.030526320154636376
+Observed fraud rate: 0.030833333333333334
+
+PASS: All explainability checks
+
+========== VERIFY DATASET UNCHANGED ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== VERIFY REQUIRED FILES ==========
+PASS: src/explain_utils.py
+PASS: src/explain.py
+PASS: reports/explain_report.json
+PASS: evidence/task6-explanation-training.log
+PASS: evidence/task6-mlflow-runs.json
+
+========== TASK 6 ALL CHECKS PASSED ==========

@@ -1,0 +1,100 @@
+[I 2026-11-24 18:03:56,246] A new study created in RDB with name: xgb-fraud
+========== OPTUNA STUDY ==========
+Existing trials: 0
+Requested new trials: 30
+[I 2026-11-24 18:03:58,908] Trial 0 finished with value: 0.10390483398567359 and parameters: {'n_estimators': 250, 'max_depth': 8, 'learning_rate': 0.1205712628744377, 'subsample': 0.8394633936788146, 'colsample_bytree': 0.5780093202212182, 'min_child_weight': 4, 'reg_lambda': 0.0017073967431528124, 'scale_pos_weight': 19.030368381735816}. Best is trial 0 with value: 0.10390483398567359.
+[I 2026-11-24 18:04:02,164] Trial 1 finished with value: 0.14518241284222597 and parameters: {'n_estimators': 350, 'max_depth': 6, 'learning_rate': 0.010725209743171997, 'subsample': 0.9879639408647978, 'colsample_bytree': 0.9162213204002109, 'min_child_weight': 5, 'reg_lambda': 0.005337032762603957, 'scale_pos_weight': 1.8659959624904914}. Best is trial 1 with value: 0.14518241284222597.
+[I 2026-11-24 18:04:03,869] Trial 2 finished with value: 0.1429142696116346 and parameters: {'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.04345454109729477, 'subsample': 0.7164916560792167, 'colsample_bytree': 0.8059264473611898, 'min_child_weight': 3, 'reg_lambda': 0.01474275315991467, 'scale_pos_weight': 3.4766491505926194}. Best is trial 1 with value: 0.14518241284222597.
+[I 2026-11-24 18:04:08,725] Trial 3 finished with value: 0.14505273214423078 and parameters: {'n_estimators': 300, 'max_depth': 7, 'learning_rate': 0.019721610970574007, 'subsample': 0.8056937753654446, 'colsample_bytree': 0.7962072844310213, 'min_child_weight': 1, 'reg_lambda': 0.26926469100861794, 'scale_pos_weight': 1.7860137889397087}. Best is trial 1 with value: 0.14518241284222597.
+[I 2026-11-24 18:04:10,094] Trial 4 finished with value: 0.09285738820212504 and parameters: {'n_estimators': 100, 'max_depth': 8, 'learning_rate': 0.26690431824362526, 'subsample': 0.9233589392465844, 'colsample_bytree': 0.6523068845866853, 'min_child_weight': 2, 'reg_lambda': 0.5456725485601477, 'scale_pos_weight': 4.468467502504582}. Best is trial 1 with value: 0.14518241284222597.
+[I 2026-11-24 18:04:11,427] Trial 5 finished with value: 0.15683782955875628 and parameters: {'n_estimators': 150, 'max_depth': 5, 'learning_rate': 0.011240768803005551, 'subsample': 0.9637281608315128, 'colsample_bytree': 0.6293899908000085, 'min_child_weight': 14, 'reg_lambda': 0.017654048052495083, 'scale_pos_weight': 5.864129169696525}. Best is trial 5 with value: 0.15683782955875628.
+[I 2026-11-24 18:04:12,548] Trial 6 pruned. 
+[I 2026-11-24 18:04:13,367] Trial 7 finished with value: 0.14880544259342313 and parameters: {'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.011662890273931383, 'subsample': 0.7301321323053057, 'colsample_bytree': 0.6943386448447411, 'min_child_weight': 6, 'reg_lambda': 2.0651425578959257, 'scale_pos_weight': 3.3648671441879534}. Best is trial 5 with value: 0.15683782955875628.
+[I 2026-11-24 18:04:14,936] Trial 8 finished with value: 0.165209269289507 and parameters: {'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.016149614799999188, 'subsample': 0.9208787923016158, 'colsample_bytree': 0.5372753218398854, 'min_child_weight': 20, 'reg_lambda': 1.2273800987852967, 'scale_pos_weight': 1.9657448966046123}. Best is trial 8 with value: 0.165209269289507.
+[I 2026-11-24 18:04:15,890] Trial 9 pruned. 
+[I 2026-11-24 18:04:19,484] Trial 10 finished with value: 0.16853703935168976 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.028477486830279865, 'subsample': 0.6071847502459278, 'colsample_bytree': 0.5072835039169765, 'min_child_weight': 19, 'reg_lambda': 7.297929454294196, 'scale_pos_weight': 9.980474278204555}. Best is trial 10 with value: 0.16853703935168976.
+[I 2026-11-24 18:04:21,490] Trial 11 finished with value: 0.1693155509718923 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.030062564615220944, 'subsample': 0.6068744601075835, 'colsample_bytree': 0.5117573877987993, 'min_child_weight': 20, 'reg_lambda': 9.319494537560617, 'scale_pos_weight': 9.622986914353604}. Best is trial 11 with value: 0.1693155509718923.
+[I 2026-11-24 18:04:23,517] Trial 12 finished with value: 0.16612892146671002 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.037502178281013404, 'subsample': 0.6014562981232444, 'colsample_bytree': 0.52247020987727, 'min_child_weight': 15, 'reg_lambda': 9.742231829355072, 'scale_pos_weight': 10.488305311635493}. Best is trial 11 with value: 0.1693155509718923.
+[I 2026-11-24 18:04:25,507] Trial 13 finished with value: 0.16902502349492102 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.02727949666326725, 'subsample': 0.6040569883749647, 'colsample_bytree': 0.5937663157166836, 'min_child_weight': 10, 'reg_lambda': 9.94145050297255, 'scale_pos_weight': 10.860357658654266}. Best is trial 11 with value: 0.1693155509718923.
+[I 2026-11-24 18:04:26,967] Trial 14 pruned. 
+[I 2026-11-24 18:04:30,189] Trial 15 pruned. 
+[I 2026-11-24 18:04:32,003] Trial 16 finished with value: 0.16842201547500044 and parameters: {'n_estimators': 450, 'max_depth': 2, 'learning_rate': 0.024922432998446695, 'subsample': 0.6517599794502843, 'colsample_bytree': 0.5707921208261755, 'min_child_weight': 13, 'reg_lambda': 4.189753351276788, 'scale_pos_weight': 16.700987667498474}. Best is trial 11 with value: 0.1693155509718923.
+[I 2026-11-24 18:04:33,627] Trial 17 pruned. 
+[I 2026-11-24 18:04:36,410] Trial 18 finished with value: 0.15760085169589041 and parameters: {'n_estimators': 500, 'max_depth': 4, 'learning_rate': 0.018895937756163897, 'subsample': 0.6411823435579336, 'colsample_bytree': 0.5816704665788216, 'min_child_weight': 12, 'reg_lambda': 9.939220724771928, 'scale_pos_weight': 7.833361860546697}. Best is trial 11 with value: 0.1693155509718923.
+[I 2026-11-24 18:04:37,800] Trial 19 pruned. 
+[I 2026-11-24 18:04:41,201] Trial 20 finished with value: 0.1635987966699103 and parameters: {'n_estimators': 450, 'max_depth': 2, 'learning_rate': 0.04302553031342477, 'subsample': 0.7709759006337282, 'colsample_bytree': 0.5555081154913287, 'min_child_weight': 7, 'reg_lambda': 1.9911370075274073, 'scale_pos_weight': 8.59947225280078}. Best is trial 11 with value: 0.1693155509718923.
+[I 2026-11-24 18:04:43,242] Trial 21 finished with value: 0.1700321837386367 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.026159367791959917, 'subsample': 0.6010004902112124, 'colsample_bytree': 0.5179576183143129, 'min_child_weight': 18, 'reg_lambda': 5.3521519170871565, 'scale_pos_weight': 10.446518764126761}. Best is trial 21 with value: 0.1700321837386367.
+[I 2026-11-24 18:04:45,154] Trial 22 finished with value: 0.16771396894215554 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.02296098149045273, 'subsample': 0.6315865219372829, 'colsample_bytree': 0.5059311091345381, 'min_child_weight': 17, 'reg_lambda': 3.6964666048121644, 'scale_pos_weight': 14.898322639644128}. Best is trial 21 with value: 0.1700321837386367.
+[I 2026-11-24 18:04:47,346] Trial 23 finished with value: 0.16570855598462378 and parameters: {'n_estimators': 450, 'max_depth': 3, 'learning_rate': 0.014324812323146483, 'subsample': 0.6956843598674294, 'colsample_bytree': 0.6055484877546253, 'min_child_weight': 11, 'reg_lambda': 5.591839041528352, 'scale_pos_weight': 4.913207215400448}. Best is trial 21 with value: 0.1700321837386367.
+[I 2026-11-24 18:04:48,920] Trial 24 finished with value: 0.1665583848293329 and parameters: {'n_estimators': 350, 'max_depth': 2, 'learning_rate': 0.03520908062378194, 'subsample': 0.6024957419237826, 'colsample_bytree': 0.5386387138719024, 'min_child_weight': 20, 'reg_lambda': 0.8723872729944168, 'scale_pos_weight': 7.195086323930095}. Best is trial 21 with value: 0.1700321837386367.
+[I 2026-11-24 18:04:50,547] Trial 25 pruned. 
+[I 2026-11-24 18:04:53,867] Trial 26 pruned. 
+[I 2026-11-24 18:04:55,521] Trial 27 finished with value: 0.16658255807920774 and parameters: {'n_estimators': 350, 'max_depth': 2, 'learning_rate': 0.01581240752398661, 'subsample': 0.6244303404257605, 'colsample_bytree': 0.5865014823404614, 'min_child_weight': 18, 'reg_lambda': 0.361918738327021, 'scale_pos_weight': 10.417659943008113}. Best is trial 21 with value: 0.1700321837386367.
+[I 2026-11-24 18:04:56,817] Trial 28 pruned. 
+[I 2026-11-24 18:04:58,044] Trial 29 pruned. 
+
+========== TUNING RESULTS ==========
+Total trials: 30
+Completed trials: 20
+Pruned trials: 10
+Best trial: 21
+Best CV PR-AUC: 0.1700321837386367
+Best parameters:
+{
+  "n_estimators": 500,
+  "max_depth": 2,
+  "learning_rate": 0.026159367791959917,
+  "subsample": 0.6010004902112124,
+  "colsample_bytree": 0.5179576183143129,
+  "min_child_weight": 18,
+  "reg_lambda": 5.3521519170871565,
+  "scale_pos_weight": 10.446518764126761
+}
+
+========== OOF THRESHOLD OPTIMISATION ==========
+Decision threshold: 0.23
+Optimised OOF cost: 72255.0
+
+========== TRAIN FINAL XGBOOST ==========
+{
+  "cv_pr_auc": 0.1700321837386367,
+  "test_accuracy": 0.74,
+  "test_roc_auc": 0.8424679881945574,
+  "test_pr_auc": 0.23161202325020996,
+  "test_precision": 0.08659049909801564,
+  "test_recall": 0.7783783783783784,
+  "test_f1": 0.15584415584415584,
+  "decision_threshold": 0.23,
+  "test_cost": 15795.0,
+  "test_cost_at_0_5": 23145.0
+}
+
+========== REGISTER MODEL ==========
+/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/types/utils.py:406: UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+  warnings.warn(
+/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/types/utils.py:406: UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+  warnings.warn(
+2026/11/24 18:05:06 WARNING mlflow.utils.requirements_utils: The following packages were not found in the public PyPI package index as of 2024-07-22; if these packages are not present in the public PyPI index, you must install them manually before loading your model: {'xgboost-cpu'}
+Successfully registered model 'fraud-detector'.
+2026/11/24 18:05:06 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: fraud-detector, version 1
+Created version '1' of model 'fraud-detector'.
+Downloading artifacts:   0%|          | 0/7 [00:00<?, ?it/s]Downloading artifacts:  14%|█▍        | 1/7 [00:00<00:00, 13.80it/s]Downloading artifacts:  29%|██▊       | 2/7 [00:00<00:00, 26.06it/s]Downloading artifacts:  43%|████▎     | 3/7 [00:00<00:00, 37.28it/s]Downloading artifacts:  57%|█████▋    | 4/7 [00:00<00:00, 38.85it/s]Downloading artifacts:  57%|█████▋    | 4/7 [00:00<00:00, 38.85it/s]Downloading artifacts:  71%|███████▏  | 5/7 [00:00<00:00, 38.85it/s]Downloading artifacts:  86%|████████▌ | 6/7 [00:00<00:00, 38.85it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 38.85it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 62.93it/s]
+2026/11/24 18:05:06 INFO mlflow.tracking._tracking_service.client: 🏃 View run xgb_optuna_best at: http://127.0.0.1:5000/#/experiments/1/runs/a7d0dadf7902447fa2016a0a125b98c4.
+2026/11/24 18:05:06 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+Registered model: fraud-detector
+Champion version: 1
+Champion run ID: a7d0dadf7902447fa2016a0a125b98c4
+
+========== PARAMETER IMPORTANCE ==========
+learning_rate: 0.340797
+max_depth: 0.327743
+min_child_weight: 0.130423
+colsample_bytree: 0.113123
+scale_pos_weight: 0.036373
+n_estimators: 0.031606
+subsample: 0.017796
+reg_lambda: 0.002139
+
+PASS: Optuna tuning completed
+PASS: Champion registered
+PASS: Tuning report saved

@@ -1,0 +1,45 @@
+# Python environments
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Credentials and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+secrets/
+.aws/
+.ssh/
+.netrc
+.git-credentials
+
+# Runtime files
+*.pid
+*.tmp
+*.swp
+*.db-wal
+*.db-shm
+*.db-journal
+mlflow-server.out
+
+# Editor files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

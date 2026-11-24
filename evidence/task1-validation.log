@@ -1,0 +1,33 @@
+========== VERIFY MLFLOW HEALTH ==========
+OK
+
+========== VERIFY DATASET INTEGRITY ==========
+PASS: Official dataset split
+PASS: No duplicate or overlapping transactions
+PASS: Correct feature selection
+PASS: Both classes present
+PASS: Stratified split
+PASS: Expected fraud counts
+PASS: Missing values present
+PASS: Deterministic generation
+
+========== VERIFY MLFLOW RUN ==========
+true
+
+========== VERIFY REQUIRED FILES ==========
+PASS: src/fraudsim.py
+PASS: src/common.py
+PASS: src/make_data.py
+PASS: start_mlflow.sh
+PASS: data/train.csv
+PASS: data/test.csv
+PASS: reports/data_profile.json
+PASS: mlflow.db
+PASS: constraints.txt
+
+========== SAVE DATASET CHECKSUMS ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== TASK 1 ALL CHECKS PASSED ==========

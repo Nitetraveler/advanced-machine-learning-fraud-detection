@@ -1,0 +1,49 @@
+========== VERIFY MLFLOW HEALTH ==========
+OK
+
+========== QUERY ENSEMBLE EXPERIMENTS ==========
+stacking_lr_rf_xgb	FINISHED	fef733c94cd840d6903f9470fb5c2a17
+xgboost	FINISHED	d2f02b24768b433a8ce09d66085242d5
+hist_gradient_boosting	FINISHED	79679c40636f4fd299d329bfb7d822e8
+random_forest	FINISHED	292dd9518baf43d8b2d7317bc8d2bc67
+logreg_balanced	FINISHED	cc1b2847ee6b4278809641d6687ee5b2
+
+========== VERIFY ALL FIVE MODELS ==========
+PASS: All five ensemble runs finished
+PASS: hist_gradient_boosting metrics verified
+PASS: logreg_balanced metrics verified
+PASS: random_forest metrics verified
+PASS: stacking_lr_rf_xgb metrics verified
+PASS: xgboost metrics verified
+
+========== VERIFIED MODEL COMPARISON ==========
+                 model  cv_pr_auc_mean  cv_pr_auc_std  test_pr_auc  test_roc_auc  train_seconds
+    stacking_lr_rf_xgb        0.162481       0.035486     0.198172      0.834028      55.489778
+         random_forest        0.139679       0.022960     0.151688      0.813746      14.364560
+       logreg_balanced        0.137295       0.025332     0.187180      0.828721       0.347694
+hist_gradient_boosting        0.135455       0.024913     0.176325      0.821084       1.545185
+               xgboost        0.134153       0.026134     0.186227      0.813595       3.776971
+
+Best model by CV PR-AUC: stacking_lr_rf_xgb
+Best CV PR-AUC: 0.16248087688868065
+
+========== STACKING ANALYSIS ==========
+Best non-stacking model: random_forest
+Stacking CV gain: 0.022802
+Stacking CV std: 0.03548613062630337
+Best base model CV std: 0.02296023804021337
+
+PASS: Ensemble comparison report saved
+
+========== VERIFY DATASET UNCHANGED ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== VERIFY REQUIRED FILES ==========
+PASS: src/ensembles.py
+PASS: reports/ensemble_comparison.csv
+PASS: evidence/task4-ensemble-training.log
+PASS: evidence/task4-mlflow-runs.json
+
+========== TASK 4 ALL CHECKS PASSED ==========

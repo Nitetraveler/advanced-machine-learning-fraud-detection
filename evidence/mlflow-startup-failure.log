@@ -1,0 +1,23 @@
+2026/11/24 17:52:11 ERROR mlflow.cli: Error initializing backend store
+2026/11/24 17:52:11 ERROR mlflow.cli: cannot import name 'FallbackAsyncAdaptedQueuePool' from 'sqlalchemy.pool' (/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/sqlalchemy/pool/__init__.py)
+Traceback (most recent call last):
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/cli.py", line 425, in server
+    initialize_backend_stores(backend_store_uri, registry_store_uri, default_artifact_root)
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/server/handlers.py", line 355, in initialize_backend_stores
+    _get_tracking_store(backend_store_uri, default_artifact_root)
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/server/handlers.py", line 332, in _get_tracking_store
+    _tracking_store = _tracking_store_registry.get_store(store_uri, artifact_root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 42, in get_store
+    return self._get_store_with_resolved_uri(resolved_store_uri, artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py", line 52, in _get_store_with_resolved_uri
+    return builder(store_uri=resolved_store_uri, artifact_uri=artifact_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/server/handlers.py", line 151, in _get_sqlalchemy_store
+    from mlflow.store.tracking.sqlalchemy_store import SqlAlchemyStore
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py", line 16, in <module>
+    import mlflow.store.db.utils
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/store/db/utils.py", line 12, in <module>
+    from sqlalchemy.pool import (
+ImportError: cannot import name 'FallbackAsyncAdaptedQueuePool' from 'sqlalchemy.pool' (/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/sqlalchemy/pool/__init__.py). Did you mean: 'AsyncAdaptedQueuePool'?

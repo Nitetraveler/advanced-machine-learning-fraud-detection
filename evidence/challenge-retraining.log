@@ -1,0 +1,82 @@
+Downloading artifacts:   0%|          | 0/7 [00:00<?, ?it/s]Downloading artifacts:  14%|█▍        | 1/7 [00:00<00:00, 370.00it/s]Downloading artifacts:  29%|██▊       | 2/7 [00:00<00:00, 127.20it/s]Downloading artifacts:  43%|████▎     | 3/7 [00:00<00:00, 144.26it/s]Downloading artifacts:  57%|█████▋    | 4/7 [00:00<00:00, 172.30it/s]Downloading artifacts:  71%|███████▏  | 5/7 [00:00<00:00, 69.18it/s] Downloading artifacts:  86%|████████▌ | 6/7 [00:00<00:00, 71.68it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 59.40it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 59.40it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 59.13it/s]
+========== RETRAINING DATA ==========
+Original training rows: 24000
+Drift training rows: 2500
+Combined training rows: 26500
+Independent drift holdout: 2500
+Original test rows: 6000
+PASS: Drift training and holdout are disjoint
+
+========== CHALLENGER OOF THRESHOLD ==========
+Champion threshold: 0.23
+Challenger threshold: 0.23
+Challenger OOF cost: 79375.0
+
+========== TRAIN CHALLENGER ==========
+
+========== PROMOTION EVALUATION ==========
+Champion drift holdout: {'pr_auc': 0.1639348994357122, 'cost': 9685.0}
+Challenger drift holdout: {'pr_auc': 0.17515024948663388, 'cost': 9380.0}
+Champion original test: {'pr_auc': 0.23161202325020996, 'cost': 15795.0}
+Challenger original test: {'pr_auc': 0.24182532292665673, 'cost': 15765.0}
+Holdout cost reduction: 3.15%
+Original test PR-AUC drop: -0.010213
+Cost gate: False
+PR-AUC gate: True
+
+========== REGISTER CHALLENGER ==========
+/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/types/utils.py:406: UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+  warnings.warn(
+/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/types/utils.py:406: UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+  warnings.warn(
+2026/11/24 18:16:09 WARNING mlflow.utils.requirements_utils: The following packages were not found in the public PyPI package index as of 2024-07-22; if these packages are not present in the public PyPI index, you must install them manually before loading your model: {'xgboost-cpu'}
+Registered model 'fraud-detector' already exists. Creating a new version of this model...
+2026/11/24 18:16:09 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: fraud-detector, version 2
+Created version '2' of model 'fraud-detector'.
+Downloading artifacts:   0%|          | 0/7 [00:00<?, ?it/s]Downloading artifacts:  14%|█▍        | 1/7 [00:00<00:00, 181.32it/s]Downloading artifacts:  29%|██▊       | 2/7 [00:00<00:00, 158.41it/s]Downloading artifacts:  43%|████▎     | 3/7 [00:00<00:00, 192.84it/s]Downloading artifacts:  57%|█████▋    | 4/7 [00:00<00:00, 117.75it/s]Downloading artifacts:  71%|███████▏  | 5/7 [00:00<00:00, 137.97it/s]Downloading artifacts:  86%|████████▌ | 6/7 [00:00<00:00, 162.85it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 177.79it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 177.02it/s]
+2026/11/24 18:16:09 INFO mlflow.tracking._tracking_service.client: 🏃 View run xgb_drift_challenger at: http://127.0.0.1:5000/#/experiments/1/runs/2538584df9384733b80407ca8fbad62d.
+2026/11/24 18:16:09 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+RETAIN: Original champion remains active
+Reason: Insufficient drift holdout cost reduction
+2026/11/24 18:16:09 INFO mlflow.tracking._tracking_service.client: 🏃 View run xgb_drift_challenger at: http://127.0.0.1:5000/#/experiments/1/runs/2538584df9384733b80407ca8fbad62d.
+2026/11/24 18:16:09 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1.
+
+========== FINAL CHALLENGE DECISION ==========
+{
+  "previous_champion_version": "1",
+  "challenger_version": "2",
+  "active_champion_version": "1",
+  "challenger_run_id": "2538584df9384733b80407ca8fbad62d",
+  "original_train_rows": 24000,
+  "drift_train_rows": 2500,
+  "drift_holdout_rows": 2500,
+  "combined_train_rows": 26500,
+  "champion_threshold": 0.23,
+  "challenger_threshold": 0.23,
+  "champion_drift_holdout": {
+    "pr_auc": 0.1639348994357122,
+    "cost": 9685.0
+  },
+  "challenger_drift_holdout": {
+    "pr_auc": 0.17515024948663388,
+    "cost": 9380.0
+  },
+  "champion_original_test": {
+    "pr_auc": 0.23161202325020996,
+    "cost": 15795.0
+  },
+  "challenger_original_test": {
+    "pr_auc": 0.24182532292665673,
+    "cost": 15765.0
+  },
+  "holdout_cost_reduction": 0.03149199793495096,
+  "original_test_pr_auc_drop": -0.010213299676446769,
+  "cost_gate": false,
+  "pr_auc_gate": true,
+  "promoted": false,
+  "decision": "RETAIN"
+}
+PASS: Challenger trained and registered
+PASS: Promotion criteria evaluated
+PASS: Champion alias verified
+PASS: Retraining report saved

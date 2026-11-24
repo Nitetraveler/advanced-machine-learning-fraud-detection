@@ -1,0 +1,1 @@
+{"model_version":"1","threshold":0.23,"predictions":[{"fraud_probability":0.042082346975803375,"is_fraud":false},{"fraud_probability":0.9928461909294128,"is_fraud":true}]}

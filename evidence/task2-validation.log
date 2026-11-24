@@ -1,0 +1,33 @@
+========== QUERY BASELINE RUNS ==========
+logreg_baseline	FINISHED	d24c101afa8546a4b9068aece14a4d2b
+dummy_majority	FINISHED	c209fed7162e482f902239b08425961d
+
+========== VERIFY BASELINE METRICS ==========
+PASS: Both baseline runs finished
+
+dummy_majority
+  test_accuracy: 0.969167
+  test_f1: 0.000000
+  test_pr_auc: 0.030833
+  test_precision: 0.000000
+  test_recall: 0.000000
+  test_roc_auc: 0.500000
+
+logreg_baseline
+  test_accuracy: 0.970333
+  test_f1: 0.101010
+  test_pr_auc: 0.200745
+  test_precision: 0.769231
+  test_recall: 0.054054
+  test_roc_auc: 0.825642
+
+PASS: Majority classifier behaviour verified
+PASS: Logistic regression improves ranking performance
+PASS: All baseline metrics verified
+
+========== VERIFY DATASET UNCHANGED ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== TASK 2 ALL CHECKS PASSED ==========

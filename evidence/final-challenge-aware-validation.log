@@ -1,0 +1,89 @@
+========== MAIN LAB VALIDATION ==========
+==============================================
+ ADVANCED MACHINE LEARNING LAB VALIDATION
+==============================================
+PASS: 01 - Dataset split: 24000 train / 6000 test
+PASS: 02 - MLflow server healthy
+PASS: 03 - Dataset experiment logged
+PASS: 04 - Both baseline models logged
+PASS: 05 - Four imbalance experiments logged
+PASS: 06 - Expected cost and threshold utilities
+PASS: 07 - Cost-sensitive threshold experiment logged
+PASS: 08 - Five ensemble experiments logged
+PASS: 09 - Optuna study contains at least 20 trials
+PASS: 10 - Tuned model experiment logged
+PASS: 11 - Registered champion alias available
+PASS: 12 - Explanation aggregation utilities
+PASS: 13 - SHAP additivity verified
+PASS: 14 - Exported model and metadata available
+PASS: 15 - Docker fraud API healthy
+PASS: 16 - API returns two predictions
+PASS: 17 - Invalid hour rejected with HTTP 422
+PASS: 18 - Local and API prediction parity
+PASS: 19 - PSI utility numerical test
+PASS: 20 - Control batch decision OK
+PASS: 21 - Drift batch decision RETRAIN
+PASS: 22 - Both monitoring experiments logged
+
+==============================================
+ VALIDATION SUMMARY
+==============================================
+PASSED: 22
+FAILED: 0
+TOTAL:  22
+ALL 22 CHECKS PASSED
+
+========== VERIFY ALL TASK LOGS ==========
+PASS: Task 1
+PASS: Task 2
+PASS: Task 3
+PASS: Task 4
+PASS: Task 5
+PASS: Task 6
+PASS: Task 7
+PASS: Task 8
+
+========== VERIFY CHALLENGE ==========
+PASS: Challenge data split
+PASS: Official promotion gates enforced
+PASS: Champion and challenger aliases
+PASS: Retraining experiment
+PASS: Registry, export and API versions consistent
+PASS: Full 30-trial tuning target
+Champion: 1
+Challenger: 2
+Cost reduction: 3.15%
+PR-AUC drop: -0.010213
+Promotion decision: RETAIN
+
+========== VERIFY DATA INTEGRITY ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== VERIFY PRESERVED EVIDENCE ==========
+evidence/pre-challenge/drift_control.json: OK
+evidence/pre-challenge/drift_drift.json: OK
+evidence/pre-challenge/drift_comparison.csv: OK
+evidence/pre-challenge/model_meta.json: OK
+evidence/pre-challenge/champion-alias.json: OK
+data/batch_control.csv: OK
+data/batch_drift.csv: OK
+
+========== VERIFY DEPLOYED MODEL ==========
+models/fraud_model.joblib: OK
+models/model_meta.json: OK
+PASS: Original champion preserved
+Compared predictions: 20
+Maximum absolute difference: 0.0
+MATCH: Local and API predictions
+
+========== VERIFY DEPENDENCIES ==========
+No broken requirements found.
+
+========== VERIFY PYTHON SYNTAX ==========
+PASS: Python source syntax
+
+==============================================
+ MAIN LAB AND CHALLENGE ALL CHECKS PASSED
+==============================================

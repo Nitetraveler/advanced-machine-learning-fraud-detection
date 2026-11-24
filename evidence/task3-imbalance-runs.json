@@ -1,0 +1,400 @@
+{
+  "runs": [
+    {
+      "info": {
+        "run_uuid": "20cf409978364d999615c5ca59594380",
+        "experiment_id": "1",
+        "run_name": "lr_smote_LEAKY",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543111596,
+        "end_time": 1795543111663,
+        "artifact_uri": "mlflow-artifacts:/1/20cf409978364d999615c5ca59594380/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "20cf409978364d999615c5ca59594380"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc_mean",
+            "value": 0.7944472077450331,
+            "timestamp": 1795543111647,
+            "step": 0
+          },
+          {
+            "key": "cv_pr_auc_std",
+            "value": 0.004808414647844175,
+            "timestamp": 1795543111647,
+            "step": 0
+          },
+          {
+            "key": "cv_roc_auc_mean",
+            "value": 0.809994286797938,
+            "timestamp": 1795543111647,
+            "step": 0
+          },
+          {
+            "key": "cv_roc_auc_std",
+            "value": 0.003515555697835772,
+            "timestamp": 1795543111647,
+            "step": 0
+          },
+          {
+            "key": "cv_precision_mean",
+            "value": 0.7439833985674695,
+            "timestamp": 1795543111647,
+            "step": 0
+          },
+          {
+            "key": "cv_precision_std",
+            "value": 0.0072553293094071904,
+            "timestamp": 1795543111647,
+            "step": 0
+          },
+          {
+            "key": "cv_recall_mean",
+            "value": 0.7504299226139295,
+            "timestamp": 1795543111647,
+            "step": 0
+          },
+          {
+            "key": "cv_recall_std",
+            "value": 0.0028582579774023304,
+            "timestamp": 1795543111647,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "cv_folds",
+            "value": "5"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/imbalance.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "lr_smote_LEAKY"
+          },
+          {
+            "key": "task",
+            "value": "imbalance"
+          },
+          {
+            "key": "leaky",
+            "value": "True"
+          }
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "ffc2b6ffe4a14c279154db5cb089cd8e",
+        "experiment_id": "1",
+        "run_name": "lr_smote",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543111137,
+        "end_time": 1795543111204,
+        "artifact_uri": "mlflow-artifacts:/1/ffc2b6ffe4a14c279154db5cb089cd8e/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "ffc2b6ffe4a14c279154db5cb089cd8e"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc_mean",
+            "value": 0.13966176494719904,
+            "timestamp": 1795543111189,
+            "step": 0
+          },
+          {
+            "key": "cv_pr_auc_std",
+            "value": 0.016421343995210065,
+            "timestamp": 1795543111189,
+            "step": 0
+          },
+          {
+            "key": "cv_roc_auc_mean",
+            "value": 0.7911145453277869,
+            "timestamp": 1795543111189,
+            "step": 0
+          },
+          {
+            "key": "cv_roc_auc_std",
+            "value": 0.019731735558660247,
+            "timestamp": 1795543111189,
+            "step": 0
+          },
+          {
+            "key": "cv_precision_mean",
+            "value": 0.08150077733238381,
+            "timestamp": 1795543111189,
+            "step": 0
+          },
+          {
+            "key": "cv_precision_std",
+            "value": 0.004486696789579522,
+            "timestamp": 1795543111189,
+            "step": 0
+          },
+          {
+            "key": "cv_recall_mean",
+            "value": 0.7216216216216216,
+            "timestamp": 1795543111189,
+            "step": 0
+          },
+          {
+            "key": "cv_recall_std",
+            "value": 0.04085463907521886,
+            "timestamp": 1795543111189,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "cv_folds",
+            "value": "5"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/imbalance.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "lr_smote"
+          },
+          {
+            "key": "task",
+            "value": "imbalance"
+          },
+          {
+            "key": "leaky",
+            "value": "False"
+          }
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "843bf555e31d42ae8887fb3e75f29f1d",
+        "experiment_id": "1",
+        "run_name": "lr_balanced",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543110360,
+        "end_time": 1795543110426,
+        "artifact_uri": "mlflow-artifacts:/1/843bf555e31d42ae8887fb3e75f29f1d/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "843bf555e31d42ae8887fb3e75f29f1d"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc_mean",
+            "value": 0.13941871668146516,
+            "timestamp": 1795543110411,
+            "step": 0
+          },
+          {
+            "key": "cv_pr_auc_std",
+            "value": 0.01720305878729841,
+            "timestamp": 1795543110411,
+            "step": 0
+          },
+          {
+            "key": "cv_roc_auc_mean",
+            "value": 0.792195742604169,
+            "timestamp": 1795543110411,
+            "step": 0
+          },
+          {
+            "key": "cv_roc_auc_std",
+            "value": 0.01977262893473114,
+            "timestamp": 1795543110411,
+            "step": 0
+          },
+          {
+            "key": "cv_precision_mean",
+            "value": 0.0807585465608924,
+            "timestamp": 1795543110411,
+            "step": 0
+          },
+          {
+            "key": "cv_precision_std",
+            "value": 0.005171300467079011,
+            "timestamp": 1795543110411,
+            "step": 0
+          },
+          {
+            "key": "cv_recall_mean",
+            "value": 0.7243243243243244,
+            "timestamp": 1795543110411,
+            "step": 0
+          },
+          {
+            "key": "cv_recall_std",
+            "value": 0.049356709102026136,
+            "timestamp": 1795543110411,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "cv_folds",
+            "value": "5"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/imbalance.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "lr_balanced"
+          },
+          {
+            "key": "task",
+            "value": "imbalance"
+          },
+          {
+            "key": "leaky",
+            "value": "False"
+          }
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "e4df89d6a3e04d3eaec458e4f486ffad",
+        "experiment_id": "1",
+        "run_name": "lr_plain",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543109741,
+        "end_time": 1795543109822,
+        "artifact_uri": "mlflow-artifacts:/1/e4df89d6a3e04d3eaec458e4f486ffad/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "e4df89d6a3e04d3eaec458e4f486ffad"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "cv_pr_auc_mean",
+            "value": 0.1415157089834655,
+            "timestamp": 1795543109802,
+            "step": 0
+          },
+          {
+            "key": "cv_pr_auc_std",
+            "value": 0.01732272761432371,
+            "timestamp": 1795543109802,
+            "step": 0
+          },
+          {
+            "key": "cv_roc_auc_mean",
+            "value": 0.7899462015756084,
+            "timestamp": 1795543109802,
+            "step": 0
+          },
+          {
+            "key": "cv_roc_auc_std",
+            "value": 0.022799104934771046,
+            "timestamp": 1795543109802,
+            "step": 0
+          },
+          {
+            "key": "cv_precision_mean",
+            "value": 0.20666666666666664,
+            "timestamp": 1795543109802,
+            "step": 0
+          },
+          {
+            "key": "cv_precision_std",
+            "value": 0.11185307823708346,
+            "timestamp": 1795543109802,
+            "step": 0
+          },
+          {
+            "key": "cv_recall_mean",
+            "value": 0.006756756756756757,
+            "timestamp": 1795543109802,
+            "step": 0
+          },
+          {
+            "key": "cv_recall_std",
+            "value": 0.004273348189416729,
+            "timestamp": 1795543109802,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "cv_folds",
+            "value": "5"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/imbalance.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "lr_plain"
+          },
+          {
+            "key": "task",
+            "value": "imbalance"
+          },
+          {
+            "key": "leaky",
+            "value": "False"
+          }
+        ]
+      },
+      "inputs": {}
+    }
+  ]
+}

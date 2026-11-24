@@ -1,0 +1,86 @@
+rows=30000 fraud_rate=0.0308
+train=24000 test=6000
+train_fraud=740 test_fraud=185
+missing values per column:
+amount                     0
+hour                       0
+account_age_days           0
+txn_count_24h              0
+distance_from_home_km    927
+avg_amount_30d             0
+merchant_category        598
+channel                    0
+urllib3.exceptions.ResponseError: too many 502 error responses
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 974, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 974, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 974, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  [Previous line repeated 2 more times]
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 964, in urlopen
+    retries = retries.increment(method, url, response=response, _pool=self)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8097): Max retries exceeded with url: http://127.0.0.1:5000/api/2.0/mlflow/experiments/get-by-name?experiment_name=fraud-detection (Caused by ResponseError('too many 502 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 187, in http_request
+    return _get_http_response_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/utils/request_utils.py", line 237, in _get_http_response_with_retries
+    return session.request(method, url, allow_redirects=allow_redirects, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/requests/adapters.py", line 720, in send
+    raise RetryError(e, request=request)
+requests.exceptions.RetryError: HTTPConnectionPool(host='127.0.0.1', port=8097): Max retries exceeded with url: http://127.0.0.1:5000/api/2.0/mlflow/experiments/get-by-name?experiment_name=fraud-detection (Caused by ResponseError('too many 502 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/ml-lab/src/make_data.py", line 29, in <module>
+    mlflow = init_mlflow()
+             ^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/src/common.py", line 64, in init_mlflow
+    mlflow.set_experiment(EXPERIMENT)
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/tracking/fluent.py", line 143, in set_experiment
+    experiment = client.get_experiment_by_name(experiment_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/tracking/client.py", line 1240, in get_experiment_by_name
+    return self._tracking_client.get_experiment_by_name(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py", line 484, in get_experiment_by_name
+    return self.store.get_experiment_by_name(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py", line 518, in get_experiment_by_name
+    response_proto = self._call_endpoint(GetExperimentByName, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py", line 81, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 357, in call_endpoint
+    response = http_request(**call_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml-lab/.venv/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 210, in http_request
+    raise MlflowException(f"API request to {url} failed with exception {e}")
+mlflow.exceptions.MlflowException: API request to http://127.0.0.1:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='127.0.0.1', port=8097): Max retries exceeded with url: http://127.0.0.1:5000/api/2.0/mlflow/experiments/get-by-name?experiment_name=fraud-detection (Caused by ResponseError('too many 502 error responses'))

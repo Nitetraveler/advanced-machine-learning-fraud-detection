@@ -1,0 +1,63 @@
+========== VERIFY MLFLOW HEALTH ==========
+OK
+
+========== VERIFY CONTAINER HEALTH ==========
+PASS: Container healthy
+
+========== VERIFY NON-ROOT USER ==========
+PASS: Non-root UID=1000
+
+========== VERIFY RESOURCE LIMIT ==========
+PASS: 1 GiB memory limit
+
+========== VERIFY RESTART POLICY ==========
+PASS: Restart policy
+
+========== VERIFY LOCALHOST PORT BINDING ==========
+PASS: API bound to localhost only
+
+========== VERIFY HEALTH RESPONSE ==========
+true
+
+========== VERIFY ACTIVE METADATA ==========
+true
+
+========== VERIFY TWO PREDICTIONS ==========
+true
+
+========== VERIFY INVALID HOUR ==========
+PASS: Invalid hour returns HTTP 422
+
+========== VERIFY PREDICTION PARITY ==========
+Compared predictions: 20
+Maximum absolute difference: 0.0
+MATCH: Local and API predictions
+
+========== VERIFY PREVIOUS API TESTS ==========
+PASS: All API input validation tests
+
+========== VERIFY DATASET UNCHANGED ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== VERIFY REQUIRED FILES ==========
+PASS: src/export_champion.py
+PASS: src/compare_api.py
+PASS: models/fraud_model.joblib
+PASS: models/model_meta.json
+PASS: serving/app.py
+PASS: serving/Dockerfile
+PASS: serving/requirements.txt
+PASS: serving/sample.json
+PASS: .dockerignore
+
+========== SAVE MODEL CHECKSUMS ==========
+models/fraud_model.joblib: OK
+models/model_meta.json: OK
+
+========== CONTAINER RESOURCE USAGE ==========
+CONTAINER ID   NAME        CPU %     MEM USAGE / LIMIT   MEM %     NET I/O        BLOCK I/O     PIDS
+9c223843bd20   fraud-api   0.18%     132.8MiB / 1GiB     12.97%    202kB / 13kB   42.3MB / 0B   4
+
+========== TASK 7 ALL CHECKS PASSED ==========

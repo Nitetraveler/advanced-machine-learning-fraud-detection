@@ -1,0 +1,66 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "amount",
+      "hour",
+      "account_age_days",
+      "txn_count_24h",
+      "distance_from_home_km",
+      "avg_amount_30d",
+      "merchant_category",
+      "channel"
+    ],
+    "data": [
+      [
+        52.56,
+        9,
+        2689,
+        3,
+        23.97,
+        89.68,
+        "grocery",
+        "pos"
+      ],
+      [
+        17.92,
+        6,
+        3551,
+        2,
+        4.2,
+        17.02,
+        "fuel",
+        "mobile"
+      ],
+      [
+        13.35,
+        6,
+        320,
+        3,
+        10.21,
+        40.68,
+        "restaurant",
+        "pos"
+      ],
+      [
+        24.09,
+        20,
+        1764,
+        0,
+        7.27,
+        25.13,
+        "online_gaming",
+        "pos"
+      ],
+      [
+        100.93,
+        7,
+        3228,
+        1,
+        23.04,
+        64.58,
+        "grocery",
+        "pos"
+      ]
+    ]
+  }
+}

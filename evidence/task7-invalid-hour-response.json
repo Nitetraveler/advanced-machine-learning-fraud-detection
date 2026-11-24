@@ -1,0 +1,1 @@
+{"detail":[{"loc":["body","transactions",0,"hour"],"msg":"Input should be less than or equal to 23","type":"less_than_equal"}]}

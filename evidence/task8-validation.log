@@ -1,0 +1,56 @@
+========== VERIFY SERVICES ==========
+OK
+PASS: Fraud API healthy
+
+========== QUERY MONITORING RUNS ==========
+monitor_drift	FINISHED	e81de83fc5b54a3898306c8e4c6f0d4a
+monitor_control	FINISHED	e24eb3a816504f52aabd3c596ba73fb7
+
+========== VERIFY DRIFT AND MONITORING ==========
+PASS: All PSI unit tests
+PASS: control batch has 5000 rows
+PASS: control all eight features monitored
+PASS: control decision=OK
+  PR-AUC=0.180538, recall=0.720000
+PASS: drift batch has 5000 rows
+PASS: drift all eight features monitored
+PASS: drift decision=RETRAIN
+  PR-AUC=0.153076, recall=0.821429
+  Trigger: amount: PSI=0.3904 >= 0.25
+  Trigger: txn_count_24h: PSI=0.2668 >= 0.25
+  Trigger: channel: PSI=0.3440 >= 0.25
+PASS: MLflow monitor_control verified
+PASS: MLflow monitor_drift verified
+
+========== FEATURE DRIFT COMPARISON ==========
+              feature  control_psi  drift_psi
+               amount     0.002613   0.390449
+              channel     0.000251   0.344012
+        txn_count_24h     0.001390   0.266757
+       avg_amount_30d     0.000903   0.002092
+                 hour     0.002744   0.001690
+distance_from_home_km     0.002450   0.001505
+    merchant_category     0.001958   0.001059
+     account_age_days     0.002639   0.000968
+
+PASS: All monitoring checks
+
+========== VERIFY ORIGINAL DATASET ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== VERIFY CHAMPION UNCHANGED ==========
+models/fraud_model.joblib: OK
+models/model_meta.json: OK
+
+========== VERIFY REQUIRED FILES ==========
+PASS: src/drift_utils.py
+PASS: src/monitor.py
+PASS: data/batch_control.csv
+PASS: data/batch_drift.csv
+PASS: reports/drift_control.json
+PASS: reports/drift_drift.json
+PASS: reports/drift_comparison.csv
+
+========== TASK 8 ALL CHECKS PASSED ==========

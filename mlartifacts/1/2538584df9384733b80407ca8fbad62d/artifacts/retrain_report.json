@@ -1,0 +1,34 @@
+{
+  "previous_champion_version": "1",
+  "challenger_version": "2",
+  "active_champion_version": "1",
+  "challenger_run_id": "2538584df9384733b80407ca8fbad62d",
+  "original_train_rows": 24000,
+  "drift_train_rows": 2500,
+  "drift_holdout_rows": 2500,
+  "combined_train_rows": 26500,
+  "champion_threshold": 0.23,
+  "challenger_threshold": 0.23,
+  "champion_drift_holdout": {
+    "pr_auc": 0.1639348994357122,
+    "cost": 9685.0
+  },
+  "challenger_drift_holdout": {
+    "pr_auc": 0.17515024948663388,
+    "cost": 9380.0
+  },
+  "champion_original_test": {
+    "pr_auc": 0.23161202325020996,
+    "cost": 15795.0
+  },
+  "challenger_original_test": {
+    "pr_auc": 0.24182532292665673,
+    "cost": 15765.0
+  },
+  "holdout_cost_reduction": 0.03149199793495096,
+  "original_test_pr_auc_drop": -0.010213299676446769,
+  "cost_gate": false,
+  "pr_auc_gate": true,
+  "promoted": false,
+  "decision": "RETAIN"
+}

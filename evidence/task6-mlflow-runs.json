@@ -1,0 +1,81 @@
+{
+  "runs": [
+    {
+      "info": {
+        "run_uuid": "9b4a9e19b9e14e1da0af92603f619eaa",
+        "experiment_id": "1",
+        "run_name": "champion_explain_calibration",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543653662,
+        "end_time": 1795543653721,
+        "artifact_uri": "mlflow-artifacts:/1/9b4a9e19b9e14e1da0af92603f619eaa/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "9b4a9e19b9e14e1da0af92603f619eaa"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "brier_raw",
+            "value": 0.06307528522427135,
+            "timestamp": 1795543653695,
+            "step": 0
+          },
+          {
+            "key": "brier_calibrated",
+            "value": 0.0266390872193163,
+            "timestamp": 1795543653695,
+            "step": 0
+          },
+          {
+            "key": "additivity_ok",
+            "value": 1.0,
+            "timestamp": 1795543653695,
+            "step": 0
+          },
+          {
+            "key": "pr_auc_raw",
+            "value": 0.23161202325020996,
+            "timestamp": 1795543653695,
+            "step": 0
+          },
+          {
+            "key": "pr_auc_calibrated",
+            "value": 0.22770456794869626,
+            "timestamp": 1795543653695,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "champion_version",
+            "value": "1"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/explain.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "champion_explain_calibration"
+          },
+          {
+            "key": "task",
+            "value": "explain"
+          }
+        ]
+      },
+      "inputs": {}
+    }
+  ]
+}

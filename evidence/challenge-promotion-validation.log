@@ -1,0 +1,74 @@
+========== RETRAINING REPORT ==========
+{
+  "previous_champion_version": "1",
+  "challenger_version": "2",
+  "active_champion_version": "1",
+  "challenger_run_id": "2538584df9384733b80407ca8fbad62d",
+  "original_train_rows": 24000,
+  "drift_train_rows": 2500,
+  "drift_holdout_rows": 2500,
+  "combined_train_rows": 26500,
+  "champion_threshold": 0.23,
+  "challenger_threshold": 0.23,
+  "champion_drift_holdout": {
+    "pr_auc": 0.1639348994357122,
+    "cost": 9685.0
+  },
+  "challenger_drift_holdout": {
+    "pr_auc": 0.17515024948663388,
+    "cost": 9380.0
+  },
+  "champion_original_test": {
+    "pr_auc": 0.23161202325020996,
+    "cost": 15795.0
+  },
+  "challenger_original_test": {
+    "pr_auc": 0.24182532292665673,
+    "cost": 15765.0
+  },
+  "holdout_cost_reduction": 0.03149199793495096,
+  "original_test_pr_auc_drop": -0.010213299676446769,
+  "cost_gate": false,
+  "pr_auc_gate": true,
+  "promoted": false,
+  "decision": "RETAIN"
+}
+
+========== QUERY RETRAINING RUNS ==========
+xgb_drift_challenger	FINISHED	2538584df9384733b80407ca8fbad62d
+
+========== VERIFY MODEL ALIASES ==========
+PASS: Numerical promotion criteria verified
+PASS: Challenger registration verified
+PASS: Champion alias follows promotion policy
+Downloading artifacts:   0%|          | 0/7 [00:00<?, ?it/s]Downloading artifacts:  14%|█▍        | 1/7 [00:00<00:00, 10305.42it/s]Downloading artifacts:  29%|██▊       | 2/7 [00:00<00:00, 5849.80it/s] Downloading artifacts:  43%|████▎     | 3/7 [00:00<00:00, 1776.24it/s]Downloading artifacts:  57%|█████▋    | 4/7 [00:00<00:00, 2211.02it/s]Downloading artifacts:  71%|███████▏  | 5/7 [00:00<00:00, 377.35it/s] Downloading artifacts:  86%|████████▌ | 6/7 [00:00<00:00, 420.93it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 405.63it/s]Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 402.08it/s]
+PASS: Challenger inference verified
+
+Champion version: 1
+Challenger version: 2
+Holdout cost reduction: 3.15%
+Original test PR-AUC drop: -0.010213
+Decision: RETAIN
+
+========== VERIFY PRESERVED EVIDENCE ==========
+evidence/pre-challenge/drift_control.json: OK
+evidence/pre-challenge/drift_drift.json: OK
+evidence/pre-challenge/drift_comparison.csv: OK
+evidence/pre-challenge/model_meta.json: OK
+evidence/pre-challenge/champion-alias.json: OK
+data/batch_control.csv: OK
+data/batch_drift.csv: OK
+
+========== VERIFY ORIGINAL DATASET ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== VERIFY CURRENT API ==========
+{
+  "status": "ok",
+  "model_name": "fraud-detector",
+  "model_version": "1"
+}
+
+PASS: Challenger training and promotion policy validated

@@ -1,0 +1,35 @@
+========== TEST VALID PREDICTIONS ==========
+{
+  "model_version": "1",
+  "threshold": 0.23,
+  "predictions": [
+    {
+      "fraud_probability": 0.042082346975803375,
+      "is_fraud": false
+    },
+    {
+      "fraud_probability": 0.9928461909294128,
+      "is_fraud": true
+    }
+  ]
+}
+true
+
+========== TEST INPUT VALIDATION ==========
+Invalid hour: HTTP 422
+PASS: Invalid hour
+NaN distance: HTTP 422
+PASS: NaN distance
+Negative amount: HTTP 422
+PASS: Negative amount
+Invalid channel: HTTP 422
+PASS: Invalid channel
+Empty batch: HTTP 422
+PASS: Empty batch
+Oversized batch: HTTP 422
+PASS: Oversized batch
+Missing optional features: HTTP 200
+PASS: Missing optional features
+PASS: All API input validation tests
+
+PASS: API prediction and validation tests

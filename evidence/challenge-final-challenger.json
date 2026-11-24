@@ -1,0 +1,17 @@
+{
+  "model_version": {
+    "name": "fraud-detector",
+    "version": "2",
+    "creation_timestamp": 1795544169209,
+    "last_updated_timestamp": 1795544169209,
+    "current_stage": "None",
+    "description": "",
+    "source": "mlflow-artifacts:/1/2538584df9384733b80407ca8fbad62d/artifacts/model",
+    "run_id": "2538584df9384733b80407ca8fbad62d",
+    "status": "READY",
+    "run_link": "",
+    "aliases": [
+      "challenger"
+    ]
+  }
+}

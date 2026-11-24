@@ -1,0 +1,37 @@
+========== VERIFY MLFLOW HEALTH ==========
+OK
+
+========== QUERY IMBALANCE RUNS ==========
+lr_smote_LEAKY	FINISHED	20cf409978364d999615c5ca59594380
+lr_smote	FINISHED	ffc2b6ffe4a14c279154db5cb089cd8e
+lr_balanced	FINISHED	843bf555e31d42ae8887fb3e75f29f1d
+lr_plain	FINISHED	e4df89d6a3e04d3eaec458e4f486ffad
+
+========== QUERY THRESHOLD RUNS ==========
+lr_balanced_cost_threshold	FINISHED	a8b1cfd654824e25ac0fbea996b6c7c8
+
+========== VERIFY ALL EXPERIMENTS ==========
+PASS: All four imbalance experiments finished
+PASS: lr_balanced: PR-AUC=0.139419, Recall=0.724324, leaky=False
+PASS: lr_plain: PR-AUC=0.141516, Recall=0.006757, leaky=False
+PASS: lr_smote: PR-AUC=0.139662, Recall=0.721622, leaky=False
+PASS: lr_smote_LEAKY: PR-AUC=0.794447, Recall=0.750430, leaky=True
+PASS: Leakage labels verified
+PASS: Cost function unit tests
+PASS: Threshold experiment finished
+Default OOF cost: 71310.0
+Optimal OOF cost: 70535.0
+Best threshold: 0.49
+PASS: Cost-sensitive threshold verified
+
+========== VERIFY DATASET UNCHANGED ==========
+data/train.csv: OK
+data/test.csv: OK
+reports/data_profile.json: OK
+
+========== VERIFY REQUIRED SCRIPTS ==========
+PASS: src/imbalance.py
+PASS: src/costs.py
+PASS: src/threshold.py
+
+========== TASK 3 ALL CHECKS PASSED ==========

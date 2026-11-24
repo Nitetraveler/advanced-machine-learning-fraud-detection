@@ -1,0 +1,43 @@
+{
+  "study_name": "xgb-fraud",
+  "total_trials": 30,
+  "completed_trials": 20,
+  "pruned_trials": 10,
+  "best_trial": 21,
+  "best_params": {
+    "n_estimators": 500,
+    "max_depth": 2,
+    "learning_rate": 0.026159367791959917,
+    "subsample": 0.6010004902112124,
+    "colsample_bytree": 0.5179576183143129,
+    "min_child_weight": 18,
+    "reg_lambda": 5.3521519170871565,
+    "scale_pos_weight": 10.446518764126761
+  },
+  "metrics": {
+    "cv_pr_auc": 0.1700321837386367,
+    "test_accuracy": 0.74,
+    "test_roc_auc": 0.8424679881945574,
+    "test_pr_auc": 0.23161202325020996,
+    "test_precision": 0.08659049909801564,
+    "test_recall": 0.7783783783783784,
+    "test_f1": 0.15584415584415584,
+    "decision_threshold": 0.23,
+    "test_cost": 15795.0,
+    "test_cost_at_0_5": 23145.0
+  },
+  "oof_best_cost": 72255.0,
+  "parameter_importance": {
+    "learning_rate": 0.34079681989529886,
+    "max_depth": 0.3277432456048916,
+    "min_child_weight": 0.13042301295381162,
+    "colsample_bytree": 0.11312284141064059,
+    "scale_pos_weight": 0.03637312796042358,
+    "n_estimators": 0.031605635496736305,
+    "subsample": 0.017796199702723326,
+    "reg_lambda": 0.002139116975474173
+  },
+  "model_name": "fraud-detector",
+  "model_version": "1",
+  "run_id": "a7d0dadf7902447fa2016a0a125b98c4"
+}

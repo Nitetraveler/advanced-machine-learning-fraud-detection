@@ -1,0 +1,170 @@
+{
+  "runs": [
+    {
+      "info": {
+        "run_uuid": "d24c101afa8546a4b9068aece14a4d2b",
+        "experiment_id": "1",
+        "run_name": "logreg_baseline",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543034025,
+        "end_time": 1795543034081,
+        "artifact_uri": "mlflow-artifacts:/1/d24c101afa8546a4b9068aece14a4d2b/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "d24c101afa8546a4b9068aece14a4d2b"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "test_accuracy",
+            "value": 0.9703333333333334,
+            "timestamp": 1795543034065,
+            "step": 0
+          },
+          {
+            "key": "test_roc_auc",
+            "value": 0.8256419790383676,
+            "timestamp": 1795543034065,
+            "step": 0
+          },
+          {
+            "key": "test_pr_auc",
+            "value": 0.20074524208083616,
+            "timestamp": 1795543034065,
+            "step": 0
+          },
+          {
+            "key": "test_precision",
+            "value": 0.7692307692307693,
+            "timestamp": 1795543034065,
+            "step": 0
+          },
+          {
+            "key": "test_recall",
+            "value": 0.05405405405405406,
+            "timestamp": 1795543034065,
+            "step": 0
+          },
+          {
+            "key": "test_f1",
+            "value": 0.10101010101010101,
+            "timestamp": 1795543034065,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "estimator",
+            "value": "LogisticRegression"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/baseline.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "logreg_baseline"
+          },
+          {
+            "key": "task",
+            "value": "baseline"
+          }
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "c209fed7162e482f902239b08425961d",
+        "experiment_id": "1",
+        "run_name": "dummy_majority",
+        "user_id": "ubuntu",
+        "status": "FINISHED",
+        "start_time": 1795543033844,
+        "end_time": 1795543033901,
+        "artifact_uri": "mlflow-artifacts:/1/c209fed7162e482f902239b08425961d/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "c209fed7162e482f902239b08425961d"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "test_accuracy",
+            "value": 0.9691666666666666,
+            "timestamp": 1795543033886,
+            "step": 0
+          },
+          {
+            "key": "test_roc_auc",
+            "value": 0.5,
+            "timestamp": 1795543033886,
+            "step": 0
+          },
+          {
+            "key": "test_pr_auc",
+            "value": 0.030833333333333334,
+            "timestamp": 1795543033886,
+            "step": 0
+          },
+          {
+            "key": "test_precision",
+            "value": 0.0,
+            "timestamp": 1795543033886,
+            "step": 0
+          },
+          {
+            "key": "test_recall",
+            "value": 0.0,
+            "timestamp": 1795543033886,
+            "step": 0
+          },
+          {
+            "key": "test_f1",
+            "value": 0.0,
+            "timestamp": 1795543033886,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "estimator",
+            "value": "DummyClassifier"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "ubuntu"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "src/baseline.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "dummy_majority"
+          },
+          {
+            "key": "task",
+            "value": "baseline"
+          }
+        ]
+      },
+      "inputs": {}
+    }
+  ]
+}
